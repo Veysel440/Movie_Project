@@ -1,0 +1,51 @@
+.ratingCard {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.ratingCard:hover {
+  transform: translateY(-2px);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.email {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.stars {
+  font-size: 1.4rem;
+  color: #d1d5db;
+  margin-bottom: 10px;
+}
+
+.star {
+  margin-right: 2px;
+  cursor: default;
+}
+
+.filled {
+  color: #f59e0b; 
+}
+
+.comment {
+  font-size: 1rem;
+  color: #374151;
+  line-height: 1.5;
+}

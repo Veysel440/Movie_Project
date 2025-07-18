@@ -1,0 +1,46 @@
+.moviesPage {
+  padding: 2rem;
+}
+
+.moviesTitle {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.moviesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.movieCard {
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.movieCard:hover {
+  transform: scale(1.02);
+}
+
+.moviePoster {
+  width: 100%;
+  height: auto;
+}
+
+.movieInfo {
+  padding: 0.5rem 1rem;
+}
+
+.loadingMore {
+  margin: 2rem;
+  text-align: center;
+}
+
+.errorMessage {
+  color: red;
+  text-align: center;
+  margin: 2rem;
+}

@@ -1,0 +1,278 @@
+.seriesDetailContainer {
+  max-width: 1000px; 
+  margin: 30px auto;
+  padding: 0 20px;
+  background-color: #f5f7fa; 
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.seriesMain {
+  display: flex;
+  gap: 30px; 
+  margin-bottom: 50px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.poster {
+  width: 350px; 
+  height: auto; 
+  border-radius: 15px; 
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease; 
+}
+
+.poster:hover {
+  transform: scale(1.03); 
+}
+
+.info {
+  flex: 1;
+  padding: 15px;
+}
+
+.info h1 {
+  font-family: 'Poppins', sans-serif; 
+  font-size: 2.5rem; 
+  color: #1a2a44; 
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+}
+
+.info p {
+  margin: 12px 0;
+  font-family: 'Roboto', sans-serif; /* Okunaklı bir yazı tipi */
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6; /* Satır aralığını artırarak okunabilirlik */
+}
+
+.info p strong {
+  color: #0070f3; /* Vurgu rengi */
+  font-weight: 500;
+}
+
+.sectionTitle {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: #1a2a44;
+  text-align: center;
+  text-transform: uppercase; /* Büyük harfler ile şıklık */
+  letter-spacing: 1px; /* Harf aralığı */
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background-color: #0070f3;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.actorsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.actorCard {
+  width: 130px; /* Hafif genişletildi */
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.actorCard:hover {
+  transform: scale(1.05);
+}
+
+.actorPhoto {
+  width: 110px; /* Hafif artırıldı */
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff; /* Beyaz çerçeve */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 10px;
+  display: block;
+}
+
+.actorAvatar {
+  width: 110px;
+  height: 110px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 2.2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.actorInfo {
+  padding: 5px;
+}
+
+.characterName {
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.ratingForm {
+  margin-top: 30px;
+  padding: 25px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.starRating,
+.starRatingDisplay {
+  margin: 15px 0;
+  font-size: 1.8rem; /* Yıldızlar biraz büyütüldü */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.star {
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.filled {
+  color: #ffd700;
+}
+
+.ratingValue {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.ratingsList {
+  margin-top: 30px;
+}
+
+.rating-card {
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background-color: #fafafa;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  color: #1a2a44;
+}
+
+.authInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.authInput:focus {
+  border-color: #0070f3;
+  outline: none;
+}
+
+.errorInput {
+  border-color: #dc3545;
+}
+
+.errorMessage {
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.emailMessage {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+.authButton {
+  padding: 12px 25px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.authButton:hover {
+  background-color: #005bb5;
+}
+
+.loadingSpinner {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #666;
+  padding: 30px;
+  position: relative;
+}
+
+.loadingSpinner::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 4px solid #666;
+  border-top: 4px solid #0070f3;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.errorContainer {
+  text-align: center;
+  padding: 30px;
+  color: #dc3545;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Yazı tiplerini Google Fonts'tan yüklemek için @import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap');

@@ -1,0 +1,156 @@
+{"level":"info","message":"Veritabanı havuzu oluşturuldu","timestamp":"2025-06-25T12:35:59.979Z"}
+{"level":"info","message":"Veritabanı bağlantısı başarılı","timestamp":"2025-06-25T12:36:00.080Z"}
+{"level":"info","message":"Backend server running on port 3001","timestamp":"2025-06-25T12:36:00.083Z"}
+{"level":"info","message":"Veritabanı havuzu oluşturuldu","timestamp":"2025-06-25T12:39:08.152Z"}
+{"level":"info","message":"Veritabanı bağlantısı başarılı","timestamp":"2025-06-25T12:39:08.212Z"}
+{"level":"info","message":"Backend server running on port 3001","timestamp":"2025-06-25T12:39:08.216Z"}
+{"level":"info","message":"Veritabanı havuzu oluşturuldu","timestamp":"2025-06-25T12:42:00.974Z"}
+{"level":"info","message":"Veritabanı bağlantısı başarılı","timestamp":"2025-06-25T12:42:01.062Z"}
+{"level":"info","message":"Backend server running on port 3001","timestamp":"2025-06-25T12:42:01.065Z"}
+{"level":"info","message":"Veritabanı havuzu oluşturuldu","timestamp":"2025-06-25T12:49:11.086Z"}
+{"level":"info","message":"Veritabanı bağlantısı başarılı","timestamp":"2025-06-25T12:49:11.191Z"}
+{"level":"info","message":"Backend server running on port 3001","timestamp":"2025-06-25T12:49:11.198Z"}
+{"level":"info","message":"Veritabanı havuzu oluşturuldu","timestamp":"2025-06-25T12:52:42.943Z"}
+{"level":"info","message":"Veritabanı bağlantısı başarılı","timestamp":"2025-06-25T12:52:43.056Z"}
+{"level":"info","message":"Backend server running on port 3001","timestamp":"2025-06-25T12:52:43.062Z"}
+{"level":"info","message":"Veritabanı havuzu oluşturuldu","timestamp":"2025-06-25T12:54:55.917Z"}
+{"level":"info","message":"Veritabanı bağlantısı başarılı","timestamp":"2025-06-25T12:54:56.020Z"}
+{"level":"info","message":"Backend server running on port 3001","timestamp":"2025-06-25T12:54:56.027Z"}
+{"level":"info","message":"Veritabanı havuzu oluşturuldu","timestamp":"2025-06-25T13:06:37.671Z"}
+{"level":"info","message":"Veritabanı bağlantısı başarılı","timestamp":"2025-06-25T13:06:37.761Z"}
+{"level":"info","message":"Backend server running on port 3001","timestamp":"2025-06-25T13:06:37.764Z"}
+{"level":"info","message":"Veritabanı havuzu oluşturuldu","timestamp":"2025-06-25T13:11:13.809Z"}
+{"level":"info","message":"Veritabanı bağlantısı başarılı","timestamp":"2025-06-25T13:11:13.865Z"}
+{"level":"info","message":"Backend server running on port 3001","timestamp":"2025-06-25T13:11:13.868Z"}
+{"level":"info","message":"Veritabanı havuzu oluşturuldu","timestamp":"2025-06-25T13:21:10.142Z"}
+{"level":"info","message":"Veritabanı bağlantısı başarılı","timestamp":"2025-06-25T13:21:10.231Z"}
+{"level":"info","message":"Backend server running on port 3001","timestamp":"2025-06-25T13:21:10.234Z"}
+{"level":"info","message":"Veritabanı havuzu oluşturuldu","timestamp":"2025-06-25T13:27:21.741Z"}
+{"level":"info","message":"Veritabanı bağlantısı başarılı","timestamp":"2025-06-25T13:27:21.825Z"}
+{"level":"info","message":"Backend server running on port 3001","timestamp":"2025-06-25T13:27:21.829Z"}
+{"level":"info","message":"Veritabanı havuzu oluşturuldu","timestamp":"2025-06-25T13:31:28.479Z"}
+{"level":"info","message":"Veritabanı bağlantısı başarılı","timestamp":"2025-06-25T13:31:28.551Z"}
+{"level":"info","message":"Backend server running on port 3001","timestamp":"2025-06-25T13:31:28.555Z"}
+{"level":"info","message":"Veritabanı havuzu oluşturuldu","timestamp":"2025-06-25T13:33:46.035Z"}
+{"level":"info","message":"Veritabanı bağlantısı başarılı","timestamp":"2025-06-25T13:33:46.141Z"}
+{"level":"info","message":"Backend server running on port 3001","timestamp":"2025-06-25T13:33:46.145Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2025-06-25T13:34:02.136Z"}
+{"email":"veysel@gmail.com","level":"info","message":"Login - Gelen veri:","timestamp":"2025-06-25T13:34:02.139Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2025-06-25T13:36:59.936Z"}
+{"email":"veysel@gmail.com","level":"info","message":"Login - Gelen veri:","timestamp":"2025-06-25T13:36:59.940Z"}
+{"level":"info","message":"Veritabanı havuzu oluşturuldu","timestamp":"2025-06-25T18:11:24.669Z"}
+{"level":"info","message":"Veritabanı bağlantısı başarılı","timestamp":"2025-06-25T18:11:24.727Z"}
+{"level":"info","message":"Backend server running on port 3001","timestamp":"2025-06-25T18:11:24.730Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2025-06-25T18:11:40.241Z"}
+{"email":"veysel@gmail.com","level":"info","message":"Login - Gelen veri:","timestamp":"2025-06-25T18:11:40.244Z"}
+{"level":"info","message":"Veritabanı havuzu oluşturuldu","timestamp":"2025-06-25T18:15:16.140Z"}
+{"level":"info","message":"Veritabanı bağlantısı başarılı","timestamp":"2025-06-25T18:15:16.209Z"}
+{"level":"info","message":"Backend server running on port 3001","timestamp":"2025-06-25T18:15:16.212Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-25T18:15:21.153Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-25T18:15:25.136Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-25T18:17:43.545Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-25T18:19:17.656Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-25T18:22:29.583Z"}
+{"level":"info","message":"Veritabanı havuzu oluşturuldu","timestamp":"2025-06-25T18:22:34.481Z"}
+{"level":"info","message":"Veritabanı bağlantısı başarılı","timestamp":"2025-06-25T18:22:34.573Z"}
+{"level":"info","message":"Backend server running on port 3001","timestamp":"2025-06-25T18:22:34.576Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-25T18:25:06.541Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-25T18:25:07.930Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-25T18:26:29.042Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-25T18:27:00.876Z"}
+{"level":"info","message":"Veritabanı havuzu oluşturuldu","timestamp":"2025-06-25T18:34:14.674Z"}
+{"level":"info","message":"Veritabanı bağlantısı alındı","timestamp":"2025-06-25T18:34:14.771Z"}
+{"level":"info","message":"Veritabanı bağlantısı başarılı","timestamp":"2025-06-25T18:34:14.772Z"}
+{"level":"info","message":"Backend server running on port 3001","timestamp":"2025-06-25T18:34:14.774Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-25T18:34:18.375Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-25T18:34:19.886Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-25T18:34:21.087Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-25T18:34:21.600Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-06-25T18:34:22.035Z"}
+{"level":"info","message":"GET /api/movie_actors","timestamp":"2025-06-25T18:34:22.406Z"}
+{"level":"info","message":"GET /api/movie_genres","timestamp":"2025-06-25T18:34:22.773Z"}
+{"level":"info","message":"GET /api/movie_ratings_comments","timestamp":"2025-06-25T18:34:23.072Z"}
+{"level":"info","message":"GET /api/series_ratings_comments","timestamp":"2025-06-25T18:34:23.389Z"}
+{"level":"info","message":"GET /api/series_actors","timestamp":"2025-06-25T18:34:23.663Z"}
+{"level":"info","message":"GET /api/series_genres","timestamp":"2025-06-25T18:34:23.917Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-25T18:35:28.495Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-06-25T18:35:29.242Z"}
+{"level":"info","message":"GET /api/movie_actors","timestamp":"2025-06-25T18:35:29.807Z"}
+{"level":"info","message":"GET /api/movie_genres","timestamp":"2025-06-25T18:35:30.266Z"}
+{"level":"info","message":"GET /api/movie_ratings_comments","timestamp":"2025-06-25T18:35:30.736Z"}
+{"level":"info","message":"GET /api/series_genres","timestamp":"2025-06-25T18:35:32.356Z"}
+{"level":"info","message":"GET /api/movie_genres","timestamp":"2025-06-25T18:37:37.612Z"}
+{"level":"info","message":"Veritabanı havuzu oluşturuldu","timestamp":"2025-06-25T18:39:48.834Z"}
+{"level":"info","message":"Veritabanı bağlantısı alındı","timestamp":"2025-06-25T18:39:48.952Z"}
+{"level":"info","message":"Veritabanı bağlantısı başarılı","timestamp":"2025-06-25T18:39:48.953Z"}
+{"level":"info","message":"Backend server running on port 3001","timestamp":"2025-06-25T18:39:48.955Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-25T18:39:57.586Z"}
+{"level":"error","message":"GET /api/movies - 404 Not Found","timestamp":"2025-06-25T18:39:57.587Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-25T18:39:59.375Z"}
+{"level":"error","message":"GET /api/movies - 404 Not Found","timestamp":"2025-06-25T18:39:59.375Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-25T18:40:03.469Z"}
+{"level":"error","message":"GET /api/users - 404 Not Found","timestamp":"2025-06-25T18:40:03.470Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-06-25T18:40:04.524Z"}
+{"level":"error","message":"GET /api/series - 404 Not Found","timestamp":"2025-06-25T18:40:04.524Z"}
+{"level":"info","message":"Veritabanı havuzu oluşturuldu","timestamp":"2025-06-25T18:42:56.372Z"}
+{"level":"info","message":"Veritabanı bağlantısı alındı","timestamp":"2025-06-25T18:42:56.432Z"}
+{"level":"info","message":"Veritabanı bağlantısı başarılı","timestamp":"2025-06-25T18:42:56.432Z"}
+{"level":"info","message":"Backend server running on port 3001","timestamp":"2025-06-25T18:42:56.436Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-25T18:43:36.502Z"}
+{"level":"error","message":"GET /api/movies - 404 Not Found","timestamp":"2025-06-25T18:43:36.503Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-25T18:43:38.795Z"}
+{"level":"error","message":"GET /api/users - 404 Not Found","timestamp":"2025-06-25T18:43:38.795Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-25T18:43:39.689Z"}
+{"level":"error","message":"GET /api/movies - 404 Not Found","timestamp":"2025-06-25T18:43:39.690Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-25T18:46:37.284Z"}
+{"level":"error","message":"GET /api/users - 404 Not Found","timestamp":"2025-06-25T18:46:37.285Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-25T18:46:37.726Z"}
+{"level":"error","message":"GET /api/movies - 404 Not Found","timestamp":"2025-06-25T18:46:37.726Z"}
+{"level":"info","message":"Veritabanı havuzu oluşturuldu","timestamp":"2025-06-25T18:47:09.517Z"}
+{"level":"info","message":"Veritabanı bağlantısı alındı","timestamp":"2025-06-25T18:47:09.630Z"}
+{"level":"info","message":"Veritabanı bağlantısı başarılı","timestamp":"2025-06-25T18:47:09.631Z"}
+{"level":"info","message":"Backend server running on port 3001","timestamp":"2025-06-25T18:47:09.635Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-25T18:47:17.010Z"}
+{"level":"error","message":"GET /api/movies - 404 Not Found","timestamp":"2025-06-25T18:47:17.010Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-25T18:47:18.542Z"}
+{"level":"error","message":"GET /api/users - 404 Not Found","timestamp":"2025-06-25T18:47:18.543Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-06-25T18:47:18.966Z"}
+{"level":"error","message":"GET /api/series - 404 Not Found","timestamp":"2025-06-25T18:47:18.967Z"}
+{"level":"info","message":"POST /api/register","timestamp":"2025-06-25T18:51:15.458Z"}
+{"level":"error","message":"POST /api/register - 404 Not Found","timestamp":"2025-06-25T18:51:15.458Z"}
+{"level":"info","message":"Veritabanı havuzu oluşturuldu","timestamp":"2025-06-25T18:55:08.814Z"}
+{"level":"info","message":"Veritabanı bağlantısı alındı","timestamp":"2025-06-25T18:55:08.919Z"}
+{"level":"info","message":"Veritabanı bağlantısı başarılı","timestamp":"2025-06-25T18:55:08.921Z"}
+{"level":"info","message":"Backend server running on port 3001","timestamp":"2025-06-25T18:55:08.924Z"}
+{"level":"info","message":"POST /api/register","timestamp":"2025-06-25T18:55:57.079Z"}
+{"level":"error","message":"POST /api/register - 404 Not Found","timestamp":"2025-06-25T18:55:57.081Z"}
+{"level":"info","message":"Veritabanı havuzu oluşturuldu","timestamp":"2025-06-25T19:00:30.561Z"}
+{"level":"info","message":"Veritabanı bağlantısı alındı","timestamp":"2025-06-25T19:00:30.629Z"}
+{"level":"info","message":"Veritabanı bağlantısı başarılı","timestamp":"2025-06-25T19:00:30.630Z"}
+{"level":"info","message":"Backend server running on port 3001","timestamp":"2025-06-25T19:00:30.633Z"}
+{"level":"info","message":"POST /api/register","timestamp":"2025-06-25T19:00:55.107Z"}
+{"level":"error","message":"POST /api/register - 404 Not Found","timestamp":"2025-06-25T19:00:55.108Z"}
+{"level":"info","message":"Veritabanı havuzu oluşturuldu","timestamp":"2025-06-25T19:06:47.958Z"}
+{"level":"info","message":"Veritabanı bağlantısı alındı","timestamp":"2025-06-25T19:06:48.038Z"}
+{"level":"info","message":"Veritabanı bağlantısı başarılı","timestamp":"2025-06-25T19:06:48.039Z"}
+{"level":"info","message":"Backend server running on port 3001","timestamp":"2025-06-25T19:06:48.041Z"}
+{"level":"info","message":"POST /api/register","timestamp":"2025-06-25T19:07:11.586Z"}
+{"level":"error","message":"POST /api/register - 404 Not Found","timestamp":"2025-06-25T19:07:11.587Z"}
+{"level":"info","message":"Veritabanı havuzu oluşturuldu","timestamp":"2025-06-25T19:07:54.735Z"}
+{"level":"info","message":"Veritabanı bağlantısı alındı","timestamp":"2025-06-25T19:07:54.796Z"}
+{"level":"info","message":"Veritabanı bağlantısı başarılı","timestamp":"2025-06-25T19:07:54.796Z"}
+{"level":"info","message":"Backend server running on port 3001","timestamp":"2025-06-25T19:07:54.799Z"}
+{"level":"info","message":"POST /api/register","timestamp":"2025-06-25T19:08:06.205Z"}
+{"level":"error","message":"POST /api/register - 404 Not Found","timestamp":"2025-06-25T19:08:06.206Z"}
+{"level":"info","message":"Register server running on port 3003","timestamp":"2025-06-26T07:29:36.906Z"}
+{"level":"info","message":"Register server running on port 3003","timestamp":"2025-06-26T07:34:25.072Z"}
+{"level":"info","message":"POST /register","timestamp":"2025-06-26T07:34:56.329Z"}
+{"level":"error","message":"POST /register - 404 Not Found","timestamp":"2025-06-26T07:34:56.331Z"}
+{"level":"info","message":"Login server running on port 3002","timestamp":"2025-06-26T07:50:51.347Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-06-26T08:06:28.996Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T08:06:48.688Z"}
+{"level":"error","message":"GET /api/movies - 404 Not Found","timestamp":"2025-06-26T08:06:48.690Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T08:06:51.567Z"}
+{"level":"error","message":"GET /api/users - 404 Not Found","timestamp":"2025-06-26T08:06:51.568Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T08:06:52.195Z"}
+{"level":"error","message":"GET /api/movies - 404 Not Found","timestamp":"2025-06-26T08:06:52.197Z"}

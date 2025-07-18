@@ -1,0 +1,565 @@
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-06-26T08:13:35.551Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T08:13:49.922Z"}
+{"level":"error","message":"GET /api/movies - Hata: ORA-24415: Missing or null username.","stack":"Error: ORA-24415: Missing or null username.\n    at async initializePool (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\db.js:15:12)\n    at async getConnection (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\db.js:21:14)\n    at async handleGet (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\crud.js:6:18)\n    at async C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:25:5","timestamp":"2025-06-26T08:13:49.961Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-06-26T08:15:54.652Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T08:16:12.281Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T08:16:13.726Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-06-26T08:26:31.361Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T08:26:44.131Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-06-26T08:33:35.583Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T08:33:37.672Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T08:33:42.419Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-06-26T08:33:43.788Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T08:33:44.359Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-06-26T08:33:45.027Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T08:33:45.716Z"}
+{"level":"info","message":"GET /api/movie_actors","timestamp":"2025-06-26T08:33:46.765Z"}
+{"level":"info","message":"GET /api/movie_genres","timestamp":"2025-06-26T08:33:47.822Z"}
+{"level":"info","message":"GET /api/movie_ratings_comments","timestamp":"2025-06-26T08:33:48.682Z"}
+{"level":"info","message":"GET /api/series_ratings_comments","timestamp":"2025-06-26T08:33:49.624Z"}
+{"level":"info","message":"GET /api/series_actors","timestamp":"2025-06-26T08:33:50.584Z"}
+{"level":"info","message":"GET /api/series_genres","timestamp":"2025-06-26T08:33:51.854Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-06-26T08:33:54.022Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T08:33:55.121Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T08:40:36.189Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T08:41:04.613Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T08:41:09.464Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T08:41:10.485Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T08:41:16.437Z"}
+{"level":"info","message":"GET /api/series_genres","timestamp":"2025-06-26T08:41:17.710Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T08:41:18.902Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T08:41:37.039Z"}
+{"level":"info","message":"POST /api/users","timestamp":"2025-06-26T08:42:10.908Z"}
+{"level":"error","message":"POST /api/users - Hata: ORA-01036: illegal variable name/number","stack":"Error: ORA-01036: illegal variable name/number\n    at async handlePost (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\crud.js:32:5)\n    at async C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:51:7","timestamp":"2025-06-26T08:42:10.921Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-06-26T08:55:12.942Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T08:55:25.439Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T08:55:26.757Z"}
+{"level":"info","message":"POST /api/users","timestamp":"2025-06-26T08:55:48.866Z"}
+{"level":"error","message":"POST /api/users - Hata: Veritabanı hatası: ORA-01400: cannot insert NULL into (\"SYSTEM\".\"USERS\".\"EMAIL\")","stack":"Error: Veritabanı hatası: ORA-01400: cannot insert NULL into (\"SYSTEM\".\"USERS\".\"EMAIL\")\n    at handlePost (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\crud.js:51:11)\n    at async C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:51:7","timestamp":"2025-06-26T08:55:48.893Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-06-26T08:58:07.761Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T08:58:21.513Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T08:58:22.766Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-06-26T09:04:03.687Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T09:04:05.012Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T09:04:06.220Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T09:04:06.811Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T09:04:42.222Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T09:04:43.329Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T09:04:56.999Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T09:04:58.116Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T09:06:49.974Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T09:06:51.183Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T09:07:40.557Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T09:07:41.202Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T09:07:52.579Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T09:07:53.727Z"}
+{"level":"info","message":"DELETE /api/users/test789%40gmail.com","timestamp":"2025-06-26T09:08:32.874Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T09:08:34.118Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T09:08:39.936Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T09:08:40.808Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T09:08:57.779Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T09:08:59.888Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T09:09:33.269Z"}
+{"level":"info","message":"GET /api/movie_actors","timestamp":"2025-06-26T09:09:35.802Z"}
+{"level":"info","message":"GET /api/movie_genres","timestamp":"2025-06-26T09:09:37.029Z"}
+{"level":"info","message":"GET /api/movie_ratings_comments","timestamp":"2025-06-26T09:09:37.649Z"}
+{"level":"info","message":"GET /api/series_actors","timestamp":"2025-06-26T09:09:38.131Z"}
+{"level":"info","message":"GET /api/series_genres","timestamp":"2025-06-26T09:09:38.729Z"}
+{"level":"info","message":"GET /api/series_ratings_comments","timestamp":"2025-06-26T09:09:39.597Z"}
+{"level":"info","message":"GET /api/movie_ratings_comments","timestamp":"2025-06-26T09:09:39.979Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T09:09:41.547Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T09:10:03.281Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-06-26T13:22:24.559Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T13:22:40.797Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T13:22:43.624Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-06-26T13:22:46.648Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T13:22:51.257Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T13:22:54.032Z"}
+{"level":"info","message":"GET /api/series_genres","timestamp":"2025-06-26T13:22:55.697Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T13:22:57.117Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T13:23:05.219Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T13:23:34.640Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-06-26T13:23:35.639Z"}
+{"level":"info","message":"GET /api/movie_actors","timestamp":"2025-06-26T13:23:36.608Z"}
+{"level":"info","message":"GET /api/movie_genres","timestamp":"2025-06-26T13:23:37.691Z"}
+{"level":"info","message":"GET /api/movie_ratings_comments","timestamp":"2025-06-26T13:23:38.597Z"}
+{"level":"info","message":"GET /api/series_ratings_comments","timestamp":"2025-06-26T13:23:39.446Z"}
+{"level":"info","message":"GET /api/series_actors","timestamp":"2025-06-26T13:23:40.291Z"}
+{"level":"info","message":"GET /api/series_genres","timestamp":"2025-06-26T13:23:41.067Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T13:23:43.399Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T13:24:30.168Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T13:26:26.461Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T13:26:27.723Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T13:27:51.331Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T13:27:55.199Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T13:28:24.342Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T13:28:28.107Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T13:28:29.348Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-06-26T13:31:27.247Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T13:31:40.607Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-26T13:31:41.855Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-26T13:56:09.270Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-06-30T15:53:10.270Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-06-30T16:23:17.591Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-06-30T16:57:04.728Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-30T16:58:21.808Z"}
+{"level":"error","message":"GET /api/movies - Hata: handleGet is not a function","stack":"TypeError: handleGet is not a function\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:24:11\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-06-30T16:58:21.811Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-30T16:58:24.868Z"}
+{"level":"error","message":"GET /api/users - Hata: handleGet is not a function","stack":"TypeError: handleGet is not a function\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:24:11\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-06-30T16:58:24.870Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-30T16:58:25.777Z"}
+{"level":"error","message":"GET /api/movies - Hata: handleGet is not a function","stack":"TypeError: handleGet is not a function\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:24:11\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-06-30T16:58:25.778Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-30T16:58:27.689Z"}
+{"level":"error","message":"GET /api/movies - Hata: handleGet is not a function","stack":"TypeError: handleGet is not a function\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:24:11\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-06-30T16:58:27.690Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-30T16:58:29.120Z"}
+{"level":"error","message":"GET /api/users - Hata: handleGet is not a function","stack":"TypeError: handleGet is not a function\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:24:11\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-06-30T16:58:29.121Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-06-30T16:58:29.600Z"}
+{"level":"error","message":"GET /api/series - Hata: handleGet is not a function","stack":"TypeError: handleGet is not a function\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:24:11\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-06-30T16:58:29.601Z"}
+{"level":"info","message":"GET /api/movie_actors","timestamp":"2025-06-30T16:58:29.985Z"}
+{"level":"error","message":"GET /api/movie_actors - Hata: handleGet is not a function","stack":"TypeError: handleGet is not a function\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:24:11\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-06-30T16:58:29.986Z"}
+{"level":"info","message":"GET /api/movie_genres","timestamp":"2025-06-30T16:58:30.353Z"}
+{"level":"error","message":"GET /api/movie_genres - Hata: handleGet is not a function","stack":"TypeError: handleGet is not a function\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:24:11\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-06-30T16:58:30.355Z"}
+{"level":"info","message":"GET /api/movie_ratings_comments","timestamp":"2025-06-30T16:58:30.702Z"}
+{"level":"error","message":"GET /api/movie_ratings_comments - Hata: handleGet is not a function","stack":"TypeError: handleGet is not a function\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:24:11\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-06-30T16:58:30.703Z"}
+{"level":"info","message":"GET /api/series_ratings_comments","timestamp":"2025-06-30T16:58:31.038Z"}
+{"level":"error","message":"GET /api/series_ratings_comments - Hata: handleGet is not a function","stack":"TypeError: handleGet is not a function\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:24:11\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-06-30T16:58:31.039Z"}
+{"level":"info","message":"GET /api/series_genres","timestamp":"2025-06-30T16:58:31.671Z"}
+{"level":"error","message":"GET /api/series_genres - Hata: handleGet is not a function","stack":"TypeError: handleGet is not a function\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:24:11\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-06-30T16:58:31.672Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-30T16:58:32.359Z"}
+{"level":"error","message":"GET /api/movies - Hata: handleGet is not a function","stack":"TypeError: handleGet is not a function\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:24:11\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-06-30T16:58:32.361Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-30T17:01:44.784Z"}
+{"level":"error","message":"GET /api/movies - Hata: handleGet is not a function","stack":"TypeError: handleGet is not a function\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:24:11\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-06-30T17:01:44.786Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-30T17:01:47.828Z"}
+{"level":"error","message":"GET /api/users - Hata: handleGet is not a function","stack":"TypeError: handleGet is not a function\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:24:11\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-06-30T17:01:47.829Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-06-30T17:01:48.554Z"}
+{"level":"error","message":"GET /api/series - Hata: handleGet is not a function","stack":"TypeError: handleGet is not a function\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:24:11\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-06-30T17:01:48.555Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-30T17:02:33.144Z"}
+{"level":"error","message":"GET /api/users - Hata: handleGet is not a function","stack":"TypeError: handleGet is not a function\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:24:11\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-06-30T17:02:33.145Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-30T17:03:06.029Z"}
+{"level":"error","message":"GET /api/movies - Hata: handleGet is not a function","stack":"TypeError: handleGet is not a function\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:24:11\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-06-30T17:03:06.030Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-30T17:03:06.642Z"}
+{"level":"error","message":"GET /api/users - Hata: handleGet is not a function","stack":"TypeError: handleGet is not a function\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:24:11\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-06-30T17:03:06.643Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-06-30T17:03:07.155Z"}
+{"level":"error","message":"GET /api/series - Hata: handleGet is not a function","stack":"TypeError: handleGet is not a function\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:24:11\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-06-30T17:03:07.155Z"}
+{"level":"info","message":"GET /api/movie_actors","timestamp":"2025-06-30T17:03:07.629Z"}
+{"level":"error","message":"GET /api/movie_actors - Hata: handleGet is not a function","stack":"TypeError: handleGet is not a function\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:24:11\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-06-30T17:03:07.630Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-30T17:03:08.240Z"}
+{"level":"error","message":"GET /api/movies - Hata: handleGet is not a function","stack":"TypeError: handleGet is not a function\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:24:11\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-06-30T17:03:08.241Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-30T17:22:26.845Z"}
+{"level":"error","message":"GET /api/movies - Hata: handleGet is not a function","stack":"TypeError: handleGet is not a function\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:24:11\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-06-30T17:22:26.847Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-06-30T17:23:43.772Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-30T17:23:52.107Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-06-30T17:23:53.774Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-06-30T17:23:54.339Z"}
+{"level":"info","message":"GET /api/movie_actors","timestamp":"2025-06-30T17:23:54.742Z"}
+{"level":"info","message":"GET /api/movie_genres","timestamp":"2025-06-30T17:23:55.290Z"}
+{"level":"info","message":"GET /api/movie_ratings_comments","timestamp":"2025-06-30T17:23:55.943Z"}
+{"level":"info","message":"GET /api/series_ratings_comments","timestamp":"2025-06-30T17:23:56.244Z"}
+{"level":"info","message":"GET /api/series_genres","timestamp":"2025-06-30T17:23:57.066Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-06-30T17:23:58.113Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-05T12:59:11.166Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-05T13:13:47.311Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-05T14:42:12.095Z"}
+{"level":"info","message":"GET /api/series/detail/griselda-2024","timestamp":"2025-07-05T14:59:53.875Z"}
+{"level":"info","message":"GET /api/series/detail/griselda-2024","timestamp":"2025-07-05T15:00:02.180Z"}
+{"level":"info","message":"GET /api/series/detail/griselda-2024","timestamp":"2025-07-05T15:00:04.017Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-05T15:23:15.440Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-05T15:23:15.444Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-05T16:02:02.601Z"}
+{"level":"error","message":"Error: Tablo bulunamadı: PENDING-RATINGS\n    at handlePost (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\crud.js:33:24)\n    at async C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:35:3","timestamp":"2025-07-05T16:02:02.609Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-05T16:09:50.301Z"}
+{"level":"error","message":"Error: Tablo bulunamadı: PENDING-RATINGS\n    at handlePost (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\crud.js:33:24)\n    at async C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:35:3","timestamp":"2025-07-05T16:09:50.307Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-05T16:13:15.762Z"}
+{"level":"error","message":"Error: Tablo bulunamadı: PENDING-RATINGS\n    at handlePost (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\crud.js:33:24)\n    at async C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:35:3","timestamp":"2025-07-05T16:13:15.767Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-05T16:13:26.143Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-05T16:13:26.151Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-05T16:13:42.543Z"}
+{"level":"error","message":"Error: Tablo bulunamadı: PENDING-RATINGS\n    at handlePost (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\crud.js:33:24)\n    at async C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:26:5","timestamp":"2025-07-05T16:13:42.549Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-05T16:15:53.383Z"}
+{"level":"error","message":"Error: Tablo bulunamadı: PENDING-RATINGS\n    at handlePost (C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\crud.js:33:24)\n    at async C:\\Users\\VİCTUS\\Desktop\\dizimag\\film-sitesi\\backend\\server_admin\\routes.js:26:5","timestamp":"2025-07-05T16:15:53.391Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-05T16:17:41.801Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-05T16:17:41.806Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-05T16:17:54.105Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-05T16:20:44.568Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-05T16:23:57.139Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-05T16:28:21.675Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-05T16:28:21.679Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-14T08:15:01.442Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-14T08:15:01.457Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T16:45:01.980Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T16:59:43.177Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T16:59:54.957Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-14T16:59:56.074Z"}
+{"level":"info","message":"GET /api/movie_actors","timestamp":"2025-07-14T16:59:57.057Z"}
+{"level":"info","message":"GET /api/movie_genres","timestamp":"2025-07-14T16:59:58.543Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T17:00:00.507Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-14T17:01:22.891Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T17:01:24.250Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T17:01:30.299Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T17:02:54.093Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-14T17:03:02.453Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T17:03:02.893Z"}
+{"level":"info","message":"GET /api/series_genres","timestamp":"2025-07-14T17:04:16.058Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T17:12:37.353Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-14T17:12:39.297Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T17:12:40.864Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-14T17:17:56.892Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T17:17:57.394Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-14T17:18:14.761Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T17:18:15.252Z"}
+{"level":"info","message":"POST /api/users","timestamp":"2025-07-14T17:18:50.202Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T17:18:51.834Z"}
+{"level":"info","message":"DELETE /api/users/ahmettt%40gmail.com","timestamp":"2025-07-14T17:19:02.865Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T17:19:04.056Z"}
+{"level":"info","message":"GET /api/movie_actors","timestamp":"2025-07-14T17:19:28.909Z"}
+{"level":"info","message":"GET /api/series_ratings_comments","timestamp":"2025-07-14T17:19:31.453Z"}
+{"level":"info","message":"GET /api/series_genres","timestamp":"2025-07-14T17:19:32.748Z"}
+{"level":"info","message":"POST /api/series_genres","timestamp":"2025-07-14T17:19:47.128Z"}
+{"level":"info","message":"GET /api/series_genres","timestamp":"2025-07-14T17:19:48.258Z"}
+{"level":"info","message":"DELETE /api/series_genres/https%3A%2F%2Fdizimag.eu%2Fdizi%2Favatar-the-last-airbender-2024/aksiyonnn-macera","timestamp":"2025-07-14T17:19:51.918Z"}
+{"level":"info","message":"DELETE /api/series_genres/https%3A%2F%2Fdizimag.eu%2Fdizi%2Favatar-the-last-airbender-2024/aksiyonnn-macera","timestamp":"2025-07-14T17:20:09.591Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T17:20:24.495Z"}
+{"level":"info","message":"GET /api/movie_genres","timestamp":"2025-07-14T17:20:28.972Z"}
+{"level":"info","message":"POST /api/movie_genres","timestamp":"2025-07-14T17:20:46.106Z"}
+{"level":"info","message":"GET /api/movie_genres","timestamp":"2025-07-14T17:20:47.137Z"}
+{"level":"info","message":"DELETE /api/movie_genres/https%3A%2F%2Fdizimag.eu%2Ffilm%2Fadele/aksiyon","timestamp":"2025-07-14T17:20:50.942Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T17:20:52.985Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T17:20:53.572Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T17:57:22.600Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T17:57:23.028Z"}
+{"level":"info","message":"GET /api/comments?status=pending","timestamp":"2025-07-14T17:57:51.142Z"}
+{"level":"info","message":"GET /api/movie_actors","timestamp":"2025-07-14T17:57:52.992Z"}
+{"level":"info","message":"GET /api/movie_genres","timestamp":"2025-07-14T17:57:53.391Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T17:57:56.151Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-14T17:57:59.936Z"}
+{"level":"info","message":"GET /api/movie_actors","timestamp":"2025-07-14T17:58:00.324Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T17:58:00.825Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-14T17:59:07.963Z"}
+{"level":"info","message":"GET /api/movie_actors","timestamp":"2025-07-14T17:59:08.393Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T17:59:08.764Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T17:59:09.169Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T17:59:40.285Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T17:59:40.742Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-14T18:05:25.802Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T18:05:26.460Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T18:08:15.637Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T18:08:16.152Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-14T18:08:41.458Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T18:08:41.853Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T18:09:14.950Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T18:09:24.902Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T18:09:29.978Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T18:09:42.747Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T18:09:44.614Z"}
+{"level":"info","message":"PUT /api/users/newuser3%40example.com","timestamp":"2025-07-14T18:10:36.391Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-14T18:19:00.248Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-14T18:19:00.252Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T18:19:03.391Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-14T18:19:04.320Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T18:19:04.799Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-14T18:20:34.158Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T18:20:34.636Z"}
+{"level":"info","message":"PUT /api/users/newuser3%40example.com","timestamp":"2025-07-14T18:20:48.554Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-14T18:21:04.622Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-14T18:21:04.627Z"}
+{"level":"info","message":"GET /api/movie_genres","timestamp":"2025-07-14T18:26:10.640Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T18:26:11.789Z"}
+{"level":"info","message":"PUT /api/users/newuser3%40example.com","timestamp":"2025-07-14T18:26:23.691Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-14T18:26:48.767Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-14T18:26:48.772Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-14T18:26:52.008Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T18:26:52.711Z"}
+{"level":"info","message":"DELETE /api/users/newuser3%40example.com","timestamp":"2025-07-14T18:26:54.345Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T18:26:55.883Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T18:28:58.520Z"}
+{"level":"info","message":"PUT /api/movies/https%3A%2F%2Fdizimag.eu%2Ffilm%2Frebel-moon-part-one-a-child-of-fire-2023","timestamp":"2025-07-14T18:29:39.699Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T18:29:41.593Z"}
+{"level":"info","message":"GET /api/movie_actors","timestamp":"2025-07-14T18:30:00.518Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T18:30:01.692Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T18:30:19.778Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-14T18:30:20.145Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T18:30:21.970Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T18:30:25.326Z"}
+{"level":"info","message":"POST /api/movies","timestamp":"2025-07-14T18:31:13.516Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-14T18:31:24.307Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-14T18:31:24.311Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T18:31:27.590Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T18:31:27.979Z"}
+{"level":"info","message":"POST /api/movies","timestamp":"2025-07-14T18:31:33.664Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-14T18:31:41.327Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-14T18:31:41.333Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T18:31:47.354Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-14T18:31:49.714Z"}
+{"level":"info","message":"POST /api/series","timestamp":"2025-07-14T18:32:02.323Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-14T18:32:03.544Z"}
+{"level":"info","message":"DELETE /api/series/","timestamp":"2025-07-14T18:32:11.755Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T18:32:19.183Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-14T18:32:19.964Z"}
+{"level":"info","message":"DELETE /api/series/","timestamp":"2025-07-14T18:32:24.603Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T18:32:28.060Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T18:32:39.546Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T18:32:41.970Z"}
+{"level":"info","message":"POST /api/users","timestamp":"2025-07-14T18:33:03.090Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-14T18:33:11.519Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-14T18:33:11.523Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-14T18:33:16.956Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T18:33:17.594Z"}
+{"level":"info","message":"POST /api/users","timestamp":"2025-07-14T18:33:19.555Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-14T18:33:50.732Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-14T18:33:50.736Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T18:33:54.079Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T18:33:58.055Z"}
+{"level":"info","message":"DELETE /api/users/newuser6%40example.com","timestamp":"2025-07-14T18:34:02.521Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T18:34:03.720Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T18:34:34.601Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T18:34:38.659Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T18:34:47.832Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T18:34:49.499Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-14T18:36:44.614Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-14T18:36:44.618Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-14T18:36:48.019Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T18:36:48.478Z"}
+{"level":"info","message":"DELETE /api/users/newuser5%40example.com","timestamp":"2025-07-14T18:36:53.152Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T18:36:54.226Z"}
+{"level":"info","message":"POST /api/users","timestamp":"2025-07-14T18:37:14.714Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T18:37:15.994Z"}
+{"level":"info","message":"PUT /api/users/newuser8%40example.com","timestamp":"2025-07-14T18:37:53.125Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-14T18:38:35.346Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-14T18:38:35.350Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-14T18:38:37.967Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-14T18:38:38.608Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-14T18:38:39.541Z"}
+{"level":"info","message":"GET /api/series_genres","timestamp":"2025-07-14T18:38:49.894Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-14T18:41:28.029Z"}
+{"level":"info","message":"GET /api/comments?status=pending","timestamp":"2025-07-14T18:41:53.021Z"}
+{"level":"info","message":"POST /api/movie_ratings_comments","timestamp":"2025-07-14T18:42:55.421Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-14T18:44:20.672Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-14T18:44:36.671Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-14T18:47:22.643Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-14T18:47:40.737Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-14T18:47:59.180Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-15T12:35:09.474Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-15T12:35:09.481Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T12:44:53.844Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T12:47:42.839Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-15T12:51:53.986Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-15T12:51:53.994Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T12:53:06.150Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T12:55:56.537Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T12:56:29.344Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T12:57:57.259Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-15T13:00:43.261Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-15T13:00:43.266Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T13:01:00.630Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-15T13:02:04.882Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-15T13:02:04.888Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T13:02:26.580Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T13:03:46.226Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-15T13:46:34.640Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-15T13:46:34.644Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T13:46:50.269Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T13:48:27.118Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T14:05:00.500Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-15T14:08:37.703Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-15T14:08:37.708Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T14:08:55.872Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T14:12:27.974Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-15T14:15:25.474Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-15T14:15:25.478Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T14:15:41.651Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T14:17:56.952Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T14:24:18.856Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-15T14:24:27.923Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-15T14:24:27.934Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T14:24:45.468Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T14:27:09.156Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T14:27:36.690Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-15T14:28:43.912Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-15T14:28:43.916Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T14:29:00.628Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-15T14:31:58.840Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-15T14:31:58.845Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T14:32:13.170Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T14:33:14.234Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T14:34:46.608Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-15T14:34:51.093Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-15T14:34:51.103Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T14:35:05.920Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T14:35:58.709Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T14:40:27.520Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T14:42:16.982Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T14:43:07.373Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T14:43:32.762Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-15T14:43:45.658Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-16T13:20:09.238Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-16T13:20:09.243Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T13:21:20.932Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T13:21:26.062Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T13:21:35.517Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-16T13:21:38.052Z"}
+{"level":"info","message":"POST /api/users","timestamp":"2025-07-16T13:22:07.777Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-16T13:22:08.805Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-16T14:31:33.705Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T14:31:42.545Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T14:31:50.266Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-16T14:31:51.870Z"}
+{"level":"info","message":"PUT /api/users/newuser8%40example.com","timestamp":"2025-07-16T14:32:02.518Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-16T14:32:27.798Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-16T14:32:27.803Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T14:33:52.165Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T14:34:05.655Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-16T14:34:07.200Z"}
+{"level":"info","message":"PUT /api/users/newuser8%40example.com","timestamp":"2025-07-16T14:34:24.461Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-16T14:34:34.832Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-16T14:34:34.837Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-16T14:40:59.855Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-16T14:40:59.862Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T14:41:07.803Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T14:41:18.327Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-16T14:41:19.815Z"}
+{"level":"info","message":"PUT /api/users/newuser8%40example.com","timestamp":"2025-07-16T14:41:32.696Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-16T14:41:55.991Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-16T14:41:55.995Z"}
+{"level":"info","message":"PUT /api/users/newuser8%40example.com","timestamp":"2025-07-16T14:41:57.941Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-16T14:45:02.166Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-16T14:45:02.170Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T14:45:18.716Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-16T14:45:19.990Z"}
+{"level":"info","message":"PUT /api/users/newuser8%40example.com","timestamp":"2025-07-16T14:45:30.759Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-16T15:29:16.114Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-16T15:29:16.118Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T15:29:18.972Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T15:29:27.533Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T15:41:47.372Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T15:41:55.831Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-16T15:41:57.948Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-16T15:46:16.378Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-16T15:46:16.792Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T15:46:20.008Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T15:46:30.855Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-16T15:46:31.908Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-16T15:48:24.926Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-16T15:48:25.405Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-16T15:53:41.346Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-16T15:53:42.079Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T15:53:48.939Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T15:53:58.214Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-16T15:53:59.317Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T15:54:18.457Z"}
+{"level":"info","message":"GET /api/movie_actors","timestamp":"2025-07-16T15:54:21.271Z"}
+{"level":"info","message":"GET /api/movie_genres","timestamp":"2025-07-16T15:54:24.068Z"}
+{"level":"info","message":"GET /api/series_ratings_comments","timestamp":"2025-07-16T15:54:26.600Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T15:54:29.489Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-16T15:54:29.927Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-16T15:56:54.699Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-16T15:56:55.073Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-16T16:03:36.491Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-16T16:03:36.496Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T16:03:39.950Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-16T16:04:32.167Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-16T16:04:32.174Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T16:04:34.941Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-16T16:08:25.104Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-16T16:08:25.108Z"}
+{"level":"info","message":"GET /api/movie_actors","timestamp":"2025-07-16T16:08:27.061Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-16T16:12:38.101Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-16T16:12:38.108Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-16T16:12:40.533Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-16T16:15:14.203Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-16T16:15:14.209Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-16T16:15:17.562Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-16T16:16:13.790Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-16T16:16:13.795Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-16T16:16:15.792Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-16T16:16:16.515Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T16:16:17.137Z"}
+{"level":"info","message":"GET /api/movie_actors","timestamp":"2025-07-16T16:16:17.951Z"}
+{"level":"info","message":"GET /api/movie_genres","timestamp":"2025-07-16T16:16:18.366Z"}
+{"level":"info","message":"GET /api/comments?status=pending","timestamp":"2025-07-16T16:16:18.672Z"}
+{"level":"info","message":"GET /api/series_ratings_comments","timestamp":"2025-07-16T16:16:19.061Z"}
+{"level":"info","message":"GET /api/comments?status=pending","timestamp":"2025-07-16T16:16:19.936Z"}
+{"level":"info","message":"GET /api/series_ratings_comments","timestamp":"2025-07-16T16:16:21.251Z"}
+{"level":"info","message":"GET /api/series_actors","timestamp":"2025-07-16T16:16:21.636Z"}
+{"level":"info","message":"GET /api/series_genres","timestamp":"2025-07-16T16:16:22.039Z"}
+{"level":"info","message":"GET /api/series_ratings_comments","timestamp":"2025-07-16T16:16:23.121Z"}
+{"level":"info","message":"GET /api/comments?status=pending","timestamp":"2025-07-16T16:16:23.522Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T16:16:24.381Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-16T16:16:24.730Z"}
+{"level":"info","message":"POST /api/users","timestamp":"2025-07-16T16:27:07.459Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-16T17:01:35.288Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-16T17:01:35.293Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T17:01:38.929Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T17:01:50.773Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-16T17:01:52.439Z"}
+{"level":"info","message":"POST /api/users","timestamp":"2025-07-16T17:02:02.415Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-16T17:04:24.480Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-16T17:04:24.484Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T17:04:26.444Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T17:04:35.534Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-16T17:04:37.242Z"}
+{"level":"info","message":"POST /api/users","timestamp":"2025-07-16T17:04:46.453Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T17:08:51.615Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-16T17:08:55.121Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-16T17:08:55.140Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T17:09:21.341Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-16T17:09:22.768Z"}
+{"level":"info","message":"POST /api/users","timestamp":"2025-07-16T17:09:35.930Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-16T17:15:29.932Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-16T17:15:29.937Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T17:15:34.557Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-16T17:15:42.340Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-16T17:15:44.104Z"}
+{"level":"info","message":"POST /api/users","timestamp":"2025-07-16T17:16:03.632Z"}
+{"level":"info","message":"POST /api/users","timestamp":"2025-07-16T17:16:24.357Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-17T07:44:11.596Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-17T07:44:11.608Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-17T08:08:23.072Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-17T08:08:36.052Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-17T08:12:10.876Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-17T08:14:31.286Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-17T08:14:48.791Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-17T08:14:48.804Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-17T08:15:15.167Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-17T08:17:59.896Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-17T08:17:59.906Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-17T08:18:13.107Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-17T08:18:30.775Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-17T08:18:30.789Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-17T08:18:58.048Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-17T08:19:11.864Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-17T08:21:21.845Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-17T08:21:28.783Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-17T08:21:43.631Z"}
+{"level":"info","message":"POST /api/pending-ratings","timestamp":"2025-07-17T08:21:54.511Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-17T08:35:23.538Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-17T08:35:23.548Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-17T08:38:51.805Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-17T08:38:51.819Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-17T09:03:33.238Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-17T09:03:38.647Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-17T09:04:29.059Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-17T09:09:43.366Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-17T09:09:43.376Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-17T09:11:57.576Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-17T09:12:13.746Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-17T09:12:22.034Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-17T09:26:42.303Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-17T09:26:42.307Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-17T09:29:13.217Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-17T09:29:19.349Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-17T09:29:31.621Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-17T09:29:44.709Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-17T10:26:31.957Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-17T10:26:47.668Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-17T10:26:55.015Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-17T10:27:05.496Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-17T10:27:10.844Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-17T11:22:56.939Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-17T11:22:58.161Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-17T11:22:58.608Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-17T11:22:59.042Z"}
+{"level":"info","message":"GET /api/movie_actors","timestamp":"2025-07-17T11:22:59.396Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-17T12:03:27.044Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-17T12:09:06.045Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-17T12:09:08.737Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-17T12:09:09.219Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-17T12:09:09.613Z"}

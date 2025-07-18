@@ -1,0 +1,33 @@
+{
+  "name": "film-sitesi",
+  "version": "0.1.0",
+  "proxy": "http://localhost:3001",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@azure/app-configuration": "^1.9.0",
+    "@azure/identity": "^4.10.1",
+    "@hookform/resolvers": "^5.1.1",
+    "js-cookie": "^3.0.5",
+    "lodash": "^4.17.21",
+    "lodash.debounce": "^4.0.8",
+    "next": "15.3.3",
+    "oracledb": "^6.8.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.58.1",
+    "yup": "^1.6.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.3",
+    "tailwindcss": "^4"
+  }
+}
