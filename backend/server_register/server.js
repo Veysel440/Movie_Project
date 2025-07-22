@@ -4,10 +4,12 @@ const winston = require("winston");
 const routes = require("./routes");
 const db = require("./db");
 const config = require("./config");
+const { logErrorToDB } = require("./services/loggerService");
 require("dotenv").config();
 
 const app = express();
 
+// Winston Logger
 const logger = winston.createLogger({
   level: "info",
   format: winston.format.combine(
@@ -30,30 +32,43 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 app.use(express.json());
+
+// CORS
 app.use(
   cors({
     origin: ["http://localhost:3000"],
     credentials: true,
   })
 );
+
 app.use((req, res, next) => {
   logger.info(`${req.method} ${req.url}`);
   next();
 });
 
 db.setLogger(logger);
+
 app.use("/api", routes);
 
-app.use((req, res) => {
-  logger.error(`${req.method} ${req.url} - 404 Not Found`);
+app.use(async (req, res) => {
+  const message = `${req.method} ${req.url} - 404 Not Found`;
+  logger.error(message);
+
+  await logErrorToDB("404_HANDLER", message, null, "low");
+
   res.status(404).json({ error: `Cannot ${req.method} ${req.url}` });
 });
 
-app.use((err, req, res, next) => {
-  logger.error(`${req.method} ${req.url} - ERROR: ${err.message}`, {
-    stack: err.stack,
-  });
-  res.status(err.status || 500).json({ success: false, error: err.message });
+app.use(async (err, req, res, next) => {
+  const message = `${req.method} ${req.url} - ERROR: ${err.message}`;
+
+  logger.error(message, { stack: err.stack });
+
+  await logErrorToDB("GLOBAL_ERROR_HANDLER", err.message, err.stack, "high");
+
+  res
+    .status(err.status || 500)
+    .json({ success: false, error: err.message || "Internal Server Error" });
 });
 
 async function startServer() {
@@ -68,6 +83,9 @@ async function startServer() {
       message: error.message,
       stack: error.stack,
     });
+
+    await logErrorToDB("SERVER_START", error.message, error.stack, "high");
+
     process.exit(1);
   }
 }

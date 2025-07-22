@@ -1,5 +1,6 @@
 const oracledb = require("oracledb");
 const config = require("./config");
+const { logErrorToDB } = require("./services/loggerService");
 
 const dbConfig = config.db;
 
@@ -17,6 +18,7 @@ async function initializePool() {
       logger?.info("Veritabanı havuzu oluşturuldu");
     } catch (error) {
       logger?.error("DB Havuzu oluşturma hatası:", error);
+      await logErrorToDB("initializePool", error.message, error.stack, "high");
       throw error;
     }
   }
@@ -24,8 +26,13 @@ async function initializePool() {
 }
 
 async function getConnection() {
-  if (!pool) await initializePool();
-  return pool.getConnection();
+  try {
+    if (!pool) await initializePool();
+    return pool.getConnection();
+  } catch (error) {
+    await logErrorToDB("getConnection", error.message, error.stack, "high");
+    throw error;
+  }
 }
 
 async function closePool() {
@@ -35,6 +42,7 @@ async function closePool() {
       logger?.info("Veritabanı havuzu kapatıldı");
     } catch (error) {
       logger?.error("Havuz kapatma hatası:", error);
+      await logErrorToDB("closePool", error.message, error.stack, "mid");
     }
   }
 }

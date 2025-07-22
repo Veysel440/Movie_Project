@@ -2,6 +2,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const { getConnection } = require("./db");
 const config = require("./config");
+const { logErrorToDB } = require("./services/loggerService");
 
 async function loginUser(req, res, next) {
   try {
@@ -15,7 +16,7 @@ async function loginUser(req, res, next) {
     const result = await conn.execute(
       `SELECT PASSWORD, USER_TYPE FROM "USERS" WHERE "EMAIL" = :email`,
       [email],
-      { outFormat: oracledb.OUT_FORMAT_OBJECT }
+      { outFormat: require("oracledb").OUT_FORMAT_OBJECT }
     );
     await conn.release();
 
@@ -25,7 +26,9 @@ async function loginUser(req, res, next) {
         .json({ success: false, message: "Kullanıcı bulunamadı" });
 
     const { PASSWORD, USER_TYPE } = result.rows[0];
-    if (!(await bcrypt.compare(password, PASSWORD)))
+    const isPasswordMatch = await bcrypt.compare(password, PASSWORD);
+
+    if (!isPasswordMatch)
       return res
         .status(401)
         .json({ success: false, message: "Geçersiz şifre" });
@@ -44,6 +47,8 @@ async function loginUser(req, res, next) {
       })
       .json({ success: true, message: "Giriş başarılı", user: payload });
   } catch (err) {
+    console.error("LoginUser Hatası:", err.message);
+    await logErrorToDB("loginUser", err.message, err.stack, "high");
     next(err);
   }
 }

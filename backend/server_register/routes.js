@@ -3,6 +3,7 @@ const { handleRegister } = require("./crud");
 const { body, validationResult } = require("express-validator");
 const jwt = require("jsonwebtoken");
 const config = require("./config");
+const { logErrorToDB } = require("./services/loggerService");
 
 const router = express.Router();
 
@@ -24,9 +25,14 @@ router.post(
     try {
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
-        return res
-          .status(400)
-          .json({ success: false, error: errors.array()[0].msg });
+        const message = errors.array()[0].msg;
+        await logErrorToDB(
+          "REGISTER_VALIDATION",
+          message,
+          errors.array(),
+          "low"
+        );
+        return res.status(400).json({ success: false, error: message });
       }
 
       const userData = await handleRegister(req);
@@ -49,6 +55,12 @@ router.post(
         message: "Kayıt başarılı. Token cookie olarak bırakıldı.",
       });
     } catch (error) {
+      await logErrorToDB(
+        "REGISTER_HANDLER",
+        error.message,
+        error.stack,
+        "high"
+      );
       next(error);
     }
   }

@@ -1,9 +1,9 @@
-// server_login/controllers/authController.js
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const oracledb = require("oracledb");
 const { getConnection } = require("../db");
 const { jwt: jwtConfig, cookie: cookieConfig } = require("../config");
+const { logErrorToDB } = require("../services/loggerService");
 
 async function login(req, res, next) {
   const { email, password } = req.body;
@@ -29,6 +29,7 @@ async function login(req, res, next) {
 
     const { PASSWORD: hash, USER_TYPE: userType } = result.rows[0];
     const isMatch = await bcrypt.compare(password, hash);
+
     if (!isMatch)
       return res.status(401).json({ success: false, message: "Şifre hatalı." });
 
@@ -47,6 +48,8 @@ async function login(req, res, next) {
       .status(200)
       .json({ success: true, message: "Giriş başarılı", user: payload });
   } catch (err) {
+    console.error("LoginController Hatası:", err.message);
+    await logErrorToDB("loginController", err.message, err.stack, "high");
     next(err);
   }
 }
