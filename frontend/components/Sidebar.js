@@ -54,6 +54,11 @@ export default function Sidebar({ activeTab, setActiveTab }) {
             🎥 Dizi Türleri
           </Link>
         </li>
+        <li>
+          <Link href="#" onClick={() => setActiveTab("ERROR_LOGS")}>
+            🛑 Loglar
+          </Link>
+        </li>
       </ul>
     </div>
   );

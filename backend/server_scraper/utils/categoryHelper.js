@@ -1,4 +1,4 @@
-// utils/categoryHelper.js
+const { logErrorToDB } = require("../services/loggerService");
 
 const categoryMap = {
   gerilim: "https://dizimag.eu/kategori/gerilim",
@@ -19,15 +19,40 @@ const categoryMap = {
 };
 
 function getContentType(url) {
+  if (!url) return null;
   if (url.includes("/belgesel/")) return "documentary";
   if (url.includes("/dizi/")) return "series";
   return "movie";
 }
 
-function getRandomCategory() {
+async function getRandomCategory() {
   const allCategories = Object.keys(categoryMap);
-  const shuffled = allCategories.sort(() => 0.5 - Math.random());
-  return shuffled[0];
+
+  if (allCategories.length === 0) {
+    await logErrorToDB(
+      "categoryHelper.getRandomCategory",
+      "Kategori listesi boş!",
+      null,
+      "high"
+    );
+    throw new Error("Kategori listesi boş! Scraper durduruldu.");
+  }
+
+  try {
+    const shuffled = allCategories.sort(() => 0.5 - Math.random());
+    return shuffled[0];
+  } catch (error) {
+    await logErrorToDB(
+      "categoryHelper.getRandomCategory",
+      error.message,
+      error.stack,
+      "mid"
+    );
+
+    console.warn("⚠ Kategori seçilemedi, yeniden denenecek...");
+
+    return getRandomCategory();
+  }
 }
 
 module.exports = {

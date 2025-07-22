@@ -563,3 +563,70 @@
 {"level":"info","message":"GET /api/users","timestamp":"2025-07-17T12:09:08.737Z"}
 {"level":"info","message":"GET /api/series","timestamp":"2025-07-17T12:09:09.219Z"}
 {"level":"info","message":"GET /api/users","timestamp":"2025-07-17T12:09:09.613Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-21T14:55:34.857Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-21T14:55:34.867Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-21T14:56:19.737Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-21T14:56:23.400Z"}
+{"level":"info","message":"POST /api/users","timestamp":"2025-07-21T14:56:44.901Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-21T15:03:58.592Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-21T15:03:58.604Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-21T15:04:03.044Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-21T15:04:04.526Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-21T15:04:12.859Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-21T15:04:14.273Z"}
+{"level":"info","message":"POST /api/users","timestamp":"2025-07-21T15:04:35.958Z"}
+{"level":"info","message":"POST /api/users","timestamp":"2025-07-21T15:04:44.758Z"}
+{"level":"info","message":"POST /api/users","timestamp":"2025-07-21T15:04:44.930Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-21T15:06:03.692Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-21T15:06:03.700Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-21T15:06:05.069Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-21T15:06:05.782Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-21T15:06:06.279Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-21T15:06:06.704Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-21T15:06:44.344Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-21T15:06:44.358Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-21T15:06:59.494Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-21T15:07:02.764Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-21T15:08:07.010Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-21T15:08:08.251Z"}
+{"level":"info","message":"POST /api/users","timestamp":"2025-07-21T15:08:26.426Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-21T15:11:04.522Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-21T15:11:04.533Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-21T15:11:17.075Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-21T15:11:31.679Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-21T15:11:32.804Z"}
+{"level":"info","message":"POST /api/users","timestamp":"2025-07-21T15:11:48.746Z"}
+{"level":"info","message":"DB havuzu hazır!","timestamp":"2025-07-21T15:16:11.935Z"}
+{"level":"info","message":"Admin server running on port 3001","timestamp":"2025-07-21T15:16:11.945Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-21T15:16:24.730Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-21T15:16:33.643Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-21T15:16:34.824Z"}
+{"level":"info","message":"POST /api/users","timestamp":"2025-07-21T15:17:00.161Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-21T15:17:06.317Z"}
+{"level":"info","message":"DELETE /api/users/newuser14%40example.com","timestamp":"2025-07-21T15:19:46.008Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-21T15:19:47.029Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-21T16:15:50.005Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-21T16:16:03.439Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-21T16:19:51.059Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-21T16:20:07.299Z"}
+{"level":"info","message":"GET /api/ERROR_LOGS","timestamp":"2025-07-21T16:20:08.604Z"}
+{"level":"info","message":"GET /api/error_logs","timestamp":"2025-07-21T16:20:08.619Z"}
+{"level":"info","message":"GET /api/ERROR_LOGS","timestamp":"2025-07-21T16:20:08.639Z"}
+{"level":"info","message":"GET /api/series_genres","timestamp":"2025-07-21T16:20:11.646Z"}
+{"level":"info","message":"GET /api/series_actors","timestamp":"2025-07-21T16:20:12.199Z"}
+{"level":"info","message":"GET /api/series_ratings_comments","timestamp":"2025-07-21T16:20:13.093Z"}
+{"level":"info","message":"GET /api/comments?status=pending","timestamp":"2025-07-21T16:20:13.422Z"}
+{"level":"info","message":"GET /api/movie_actors","timestamp":"2025-07-21T16:20:14.579Z"}
+{"level":"info","message":"GET /api/movie_genres","timestamp":"2025-07-21T16:20:15.190Z"}
+{"level":"info","message":"GET /api/comments?status=pending","timestamp":"2025-07-21T16:20:16.043Z"}
+{"level":"info","message":"GET /api/series_ratings_comments","timestamp":"2025-07-21T16:20:17.551Z"}
+{"level":"info","message":"GET /api/comments?status=pending","timestamp":"2025-07-21T16:20:19.873Z"}
+{"level":"info","message":"GET /api/movie_actors","timestamp":"2025-07-21T16:20:21.941Z"}
+{"level":"info","message":"GET /api/series","timestamp":"2025-07-21T16:20:23.054Z"}
+{"level":"info","message":"GET /api/users","timestamp":"2025-07-21T16:20:23.717Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-21T16:20:24.146Z"}
+{"level":"info","message":"GET /api/series_genres","timestamp":"2025-07-21T16:20:24.979Z"}
+{"level":"info","message":"GET /api/ERROR_LOGS","timestamp":"2025-07-21T16:20:25.509Z"}
+{"level":"info","message":"GET /api/error_logs","timestamp":"2025-07-21T16:20:25.517Z"}
+{"level":"info","message":"GET /api/ERROR_LOGS","timestamp":"2025-07-21T16:20:25.532Z"}
+{"level":"info","message":"GET /api/movies","timestamp":"2025-07-21T16:20:28.005Z"}

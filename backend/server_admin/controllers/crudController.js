@@ -1,7 +1,7 @@
 const { getConnection } = require("../services/oracleService");
 const { tableConfig } = require("../config");
-const { formatDateForOracle } = require("../utils/dateFormatter");
 const oracledb = require("oracledb");
+const { logErrorToDB } = require("../services/loggerService");
 
 function prepareBind(req, config) {
   const key = config.primaryKey;
@@ -22,9 +22,7 @@ function buildBinds(data, columns, existingRecord = {}, isInsert = false) {
     const value = data[col] ?? data[upperCol] ?? data[col.toLowerCase()];
 
     if (upperCol.includes("DATE") || upperCol.includes("_AT")) {
-      binds[col] = isInsert
-        ? formatDateForOracle(new Date().toISOString())
-        : formatDateForOracle(value);
+      binds[col] = value ? new Date(value) : new Date();
     } else if (upperCol === "PASSWORD") {
       binds[col] =
         value === undefined
@@ -45,33 +43,37 @@ async function handlePost(req, res, table) {
     if (!config) throw new Error(`Tablo bulunamadı: ${table}`);
 
     const data = req.body;
-    const columns = config.columns.filter((c) => c !== "ID");
+    if (table === "USERS" && !data.CREATED_AT) {
+      data.CREATED_AT = new Date();
+    }
+
+    const columns =
+      config.columns.includes("ID") && !data.ID
+        ? config.columns.filter((c) => c !== "ID")
+        : config.columns;
 
     const binds = buildBinds(data, columns, {}, true);
 
-    const sql = `
-      INSERT INTO "${table}" (${columns.join(", ")})
-      VALUES (${columns.map((c) => `:${c}`).join(", ")})
-    `;
+    const sql = `INSERT INTO "${table}" (${columns.join(
+      ", "
+    )}) VALUES (${columns.map((c) => `:${c}`).join(", ")})`;
+
+    console.log("[SQL]", sql);
+    console.log("[Binds]", binds);
 
     await connection.execute(sql, binds, { autoCommit: true });
 
     res.json({ success: true, message: "Kayıt başarıyla eklendi." });
   } catch (err) {
-    if (err.errorNum === 1) {
-      res.status(400).json({
+    console.error("🔥 Ekleme Hatası (Oracle):", err);
+    await logErrorToDB("handlePost", err.message, err.stack, "high");
+    res
+      .status(500)
+      .json({
         success: false,
-        message: "Bu veri zaten mevcut. Aynı kaydı tekrar ekleyemezsiniz.",
+        message: "Ekleme başarısız.",
+        errorMessage: err.message,
       });
-    } else if (err.errorNum === 1843) {
-      res.status(400).json({
-        success: false,
-        message: "Geçersiz tarih formatı. Otomatik tarih atanamadı.",
-      });
-    } else {
-      console.error("Ekleme hatası:", err);
-      res.status(500).json({ success: false, message: "Ekleme hatası." });
-    }
   } finally {
     await connection.close();
   }
@@ -85,9 +87,7 @@ async function handlePut(req, res, table) {
     const columns = config.columns.filter(
       (c) => c !== config.primaryKey && c !== "ID"
     );
-
     const pkBinds = prepareBind(req, config);
-
     const whereClause = Array.isArray(config.primaryKey)
       ? config.primaryKey.map((k) => `${k} = :${k}`).join(" AND ")
       : `${config.primaryKey} = :${config.primaryKey}`;
@@ -102,7 +102,6 @@ async function handlePut(req, res, table) {
       ...buildBinds(data, columns, existingRecord, false),
       ...pkBinds,
     };
-
     const setClause = columns.map((c) => `${c} = :${c}`).join(", ");
     const sql = `UPDATE "${table}" SET ${setClause} WHERE ${whereClause}`;
 
@@ -111,6 +110,7 @@ async function handlePut(req, res, table) {
     res.json({ success: true, message: "Kayıt başarıyla güncellendi." });
   } catch (err) {
     console.error("Güncelleme hatası:", err);
+    await logErrorToDB("handlePut", err.message, err.stack, "mid");
     res.status(500).json({ success: false, message: "Güncelleme hatası." });
   } finally {
     await connection.close();
@@ -122,18 +122,17 @@ async function handleDelete(req, res, table) {
   try {
     const config = tableConfig[table];
     const binds = prepareBind(req, config);
-
     const whereClause = Array.isArray(config.primaryKey)
       ? config.primaryKey.map((k) => `${k} = :${k}`).join(" AND ")
       : `${config.primaryKey} = :${config.primaryKey}`;
 
     const sql = `DELETE FROM "${table}" WHERE ${whereClause}`;
-
     await connection.execute(sql, binds, { autoCommit: true });
 
     res.json({ success: true, message: "Kayıt başarıyla silindi." });
   } catch (err) {
     console.error("Silme hatası:", err);
+    await logErrorToDB("handleDelete", err.message, err.stack, "mid");
     res.status(500).json({ success: false, message: "Silme hatası." });
   } finally {
     await connection.close();
@@ -150,6 +149,7 @@ async function handleGet(req, res, table) {
     res.json({ success: true, data: result.rows });
   } catch (err) {
     console.error("GET hatası:", err);
+    await logErrorToDB("handleGet", err.message, err.stack, "low");
     res.status(500).json({ success: false, message: "Veri çekme hatası." });
   } finally {
     await connection.close();

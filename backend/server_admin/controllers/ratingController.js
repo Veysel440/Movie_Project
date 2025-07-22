@@ -1,4 +1,5 @@
 const { executeSQL } = require("../services/oracleService");
+const { logErrorToDB } = require("../services/loggerService");
 
 function extractSlugFromLink(link) {
   if (!link) return null;
@@ -8,7 +9,6 @@ function extractSlugFromLink(link) {
 
 async function handlePendingRatings(req, res) {
   const { LINK, EMAIL, COMMENT, RATING, TYPE } = req.body;
-
   console.log(">>> Gelen BODY:", req.body);
 
   if (!LINK || !EMAIL || !RATING || !TYPE) {
@@ -20,7 +20,7 @@ async function handlePendingRatings(req, res) {
       TYPE === "series" ? "SERIES_RATINGS_COMMENTS" : "MOVIE_RATINGS_COMMENTS";
 
     const insertSQL = `
-      INSERT INTO "${table}" ("LINK", "EMAIL", "COMMENT_TEXT", "RATING")
+      INSERT INTO "${table}" ("LINK", "EMAIL", "COMMENT", "RATING")
       VALUES (:link, :email, :comment_text, :rating)
     `;
 
@@ -31,12 +31,16 @@ async function handlePendingRatings(req, res) {
       rating: RATING,
     });
 
-    return res
-      .status(201)
-      .json({ success: true, message: "Yorum kaydedildi." });
+    res.status(201).json({ success: true, message: "Yorum kaydedildi." });
   } catch (error) {
     console.error("handlePendingRatings HATASI:", error);
-    return res.status(500).json({ success: false, message: error.message });
+    await logErrorToDB(
+      "handlePendingRatings",
+      error.message,
+      error.stack,
+      "mid"
+    );
+    res.status(500).json({ success: false, message: error.message });
   }
 }
 

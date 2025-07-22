@@ -1,45 +1,45 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
-const oracledb = require("oracledb");
-
+const dbConnection = require("../repositories/dbConnection");
 const {
   categoryMap,
   getRandomCategory,
   getContentType,
 } = require("../utils/categoryHelper");
 const { headers } = require("../utils/headers");
-
-const movieService = require("./movieService");
-const seriesService = require("./seriesService");
-const dbConnection = require("../repositories/dbConnection");
+const ContentManager = require("../services/contentManagerService");
+const logger = require("../utils/logger");
+const { logErrorToDB } = require("../services/loggerService");
 
 exports.scrapeItems = async (count) => {
   const usedLinks = new Set();
   const itemsData = [];
   const connection = await dbConnection.getConnection();
 
-  try {
-    while (itemsData.length < count) {
-      try {
-        const randomCategory = getRandomCategory();
-        const categoryUrl = categoryMap[randomCategory];
-        console.log(`Kategori: ${randomCategory} (${categoryUrl})`);
+  const MAX_RETRIES = count * 5;
+  let retries = 0;
 
+  try {
+    while (itemsData.length < count && retries < MAX_RETRIES) {
+      retries++;
+
+      const randomCategory = getRandomCategory();
+      const categoryUrl = categoryMap[randomCategory];
+      logger.info(`Kategori: ${randomCategory} (${categoryUrl})`);
+
+      let links = [];
+
+      try {
         const { data } = await axios.get(categoryUrl, { headers });
         const $ = cheerio.load(data);
 
-        let links = [];
-
-        // ✅ Hem dizileri hem filmleri kapsayacak şekilde içerik linklerini topla
         $(".item.movies a, .item.tvshows a").each((_, el) => {
           const href = $(el).attr("href");
-          if (href && !usedLinks.has(href)) {
-            links.push(href);
-          }
+          if (href && !usedLinks.has(href)) links.push(href);
         });
 
         if (links.length === 0) {
-          console.log(`⚠️ İçerik bulunamadı: ${randomCategory}`);
+          logger.warn(`İçerik bulunamadı: ${randomCategory}`);
           continue;
         }
 
@@ -51,39 +51,28 @@ exports.scrapeItems = async (count) => {
         const $$ = cheerio.load(detailHtml);
 
         const contentType = getContentType(itemUrl);
+        const item = await ContentManager.handleContent(
+          contentType,
+          $$,
+          itemUrl,
+          randomCategory,
+          connection
+        );
 
-        if (contentType === "movie" || contentType === "series") {
-          let item = null;
-
-          if (contentType === "movie") {
-            item = await movieService.handleMovie(
-              $$,
-              itemUrl,
-              randomCategory,
-              connection
-            );
-          } else {
-            item = await seriesService.handleSeries(
-              $$,
-              itemUrl,
-              randomCategory,
-              connection
-            );
-          }
-
-          if (item) {
-            itemsData.push(item);
-            console.log(
-              `✔ ${contentType === "movie" ? "Film" : "Dizi"} eklendi: ${
-                item.title
-              }`
-            );
-          }
-        } else {
-          console.log(`⚠️ Tür tanımlanamayan içerik atlandı: ${itemUrl}`);
+        if (item) {
+          itemsData.push(item);
+          logger.info(`${contentType} eklendi: ${item.title}`);
         }
       } catch (loopError) {
-        console.error("❌ İçerik işleme hatası:", loopError.message);
+        const errorMessage = `Döngü Hatası: ${loopError.message}`;
+        logger.error(errorMessage);
+
+        await logErrorToDB(
+          "scraperService.loop",
+          loopError.message,
+          { categoryUrl, stack: loopError.stack },
+          "mid"
+        );
       }
     }
 
@@ -93,15 +82,30 @@ exports.scrapeItems = async (count) => {
       items: itemsData,
     };
   } catch (error) {
-    console.error("❌ Scraper servis hatası:", error.message);
+    logger.error(`Scraper Servis Hatası: ${error.message}`);
+
+    await logErrorToDB(
+      "scraperService.scrapeItems",
+      error.message,
+      { stack: error.stack },
+      "high"
+    );
+
     throw error;
   } finally {
     if (connection) {
       try {
         await connection.close();
-        console.log("🔒 Veritabanı bağlantısı kapatıldı.");
+        logger.info("🔒 Veritabanı bağlantısı kapatıldı.");
       } catch (err) {
-        console.error("❌ Bağlantı kapatma hatası:", err.message);
+        logger.error(`Bağlantı kapatma hatası: ${err.message}`);
+
+        await logErrorToDB(
+          "scraperService.connectionClose",
+          err.message,
+          { stack: err.stack },
+          "low"
+        );
       }
     }
   }

@@ -1,4 +1,7 @@
-const { executeSQL } = require("../services/oracleService");
+const { getConnection } = require("../services/oracleService");
+const oracledb = require("oracledb");
+const { logErrorToDB } = require("../services/loggerService");
+
 async function handleSeriesDetail(req, res) {
   const slug = decodeURIComponent(req.params.link).trim();
   const connection = await getConnection();
@@ -41,15 +44,10 @@ async function handleSeriesDetail(req, res) {
       : [];
     const comments = Array.isArray(commentsRes.rows) ? commentsRes.rows : [];
 
-    res.json({
-      success: true,
-      series,
-      actors,
-      genres,
-      comments,
-    });
+    res.json({ success: true, series, actors, genres, comments });
   } catch (err) {
     console.error(err);
+    await logErrorToDB("handleSeriesDetail", err.message, err.stack, "high");
     res.status(500).json({ success: false, error: err.message });
   } finally {
     await connection.close();

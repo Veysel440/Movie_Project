@@ -1,11 +1,13 @@
 const movieRepository = require("../repositories/movieRepository");
 const { insertGenres, insertActors } = require("../utils/helpers");
+const { logErrorToDB } = require("../services/loggerService");
 
 exports.handleMovie = async ($$, itemUrl, category, connection) => {
   try {
     const title = $$('div.custom_fields:contains("Orijinal İsmi") .valor')
       .text()
       .trim();
+
     if (!title) return null;
 
     const exists = await movieRepository.exists(itemUrl, connection);
@@ -45,10 +47,8 @@ exports.handleMovie = async ($$, itemUrl, category, connection) => {
           .get() || [],
     };
 
-    // ✅ Filmi veritabanına kaydet:
     await movieRepository.insert(movie, connection);
 
-    // ✅ Türleri kaydet:
     await insertGenres(
       movie.genres,
       movie.link,
@@ -57,7 +57,6 @@ exports.handleMovie = async ($$, itemUrl, category, connection) => {
       connection
     );
 
-    // ✅ Aktörleri kaydet:
     await insertActors(
       movie.actors,
       movie.link,
@@ -69,7 +68,16 @@ exports.handleMovie = async ($$, itemUrl, category, connection) => {
     console.log(`✔ Film eklendi: ${movie.title}`);
     return movie;
   } catch (error) {
-    console.error(`❌ Film ekleme hatası (${itemUrl}):`, error.message);
+    const errorMessage = `Film ekleme hatası (${itemUrl}): ${error.message}`;
+    console.error(`❌ ${errorMessage}`);
+
+    await logErrorToDB(
+      "movieService.handleMovie",
+      error.message,
+      { itemUrl, category, stack: error.stack },
+      "mid"
+    );
+
     return null;
   }
 };

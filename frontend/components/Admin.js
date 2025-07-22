@@ -11,6 +11,7 @@ import MovieRatingsCommentsTable from "./tables/MovieRatingsCommentsTable";
 import SeriesActorsTable from "./tables/SeriesActorsTable";
 import SeriesGenresTable from "./tables/SeriesGenresTable";
 import SeriesRatingsCommentsTable from "./tables/SeriesRatingsCommentsTable";
+import LogsTable from "./logger/LogsTable";
 
 export default function Admin() {
   const [activeTab, setActiveTab] = useState("MOVIES");
@@ -62,6 +63,8 @@ export default function Admin() {
         return <SeriesGenresTable {...props} />;
       case "SERIES_RATINGS_COMMENTS":
         return <SeriesRatingsCommentsTable {...props} />;
+      case "ERROR_LOGS":
+        return <LogsTable />;
       default:
         return <p>Tablo bulunamadı.</p>;
     }

@@ -3,6 +3,7 @@ const cors = require("cors");
 const winston = require("winston");
 const routes = require("./routes");
 const db = require("./db");
+const { logErrorToDB } = require("./services/loggerService");
 require("dotenv").config();
 
 const app = express();
@@ -40,8 +41,9 @@ app.use("/api", routes);
 
 app.use((req, res) => res.status(404).json({ error: "Not Found" }));
 
-app.use((err, req, res, next) => {
+app.use(async (err, req, res, next) => {
   logger.error(err.stack);
+  await logErrorToDB("globalMiddleware", err.message, err.stack, "high");
   res.status(500).json({ error: err.message || "Sunucu hatası" });
 });
 
@@ -55,6 +57,7 @@ async function startServer() {
     });
   } catch (err) {
     logger.error("Server başlatılamadı:", err);
+    await logErrorToDB("startServer", err.message, err.stack, "high");
     process.exit(1);
   }
 }
