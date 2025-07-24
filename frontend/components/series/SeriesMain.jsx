@@ -1,6 +1,11 @@
 import styles from "../../styles/seriesDetail.module.css";
+import { logClientError } from "../../services/logger";
 
 export default function SeriesMain({ series, genres, avgRating, ratingCount }) {
+  if (!series) {
+    logClientError("SeriesMain", "series yok", "", "mid");
+    return <div>Seri bulunamadı.</div>;
+  }
   return (
     <div className={styles.seriesMain}>
       <img className={styles.poster} src={series.poster} alt={series.title} />
@@ -26,14 +31,14 @@ export default function SeriesMain({ series, genres, avgRating, ratingCount }) {
           {series.episode_duration || "Bilinmiyor"}
         </p>
         <p>
-          <strong>Tür:</strong> {genres.join(", ") || "Bilinmiyor"}
+          <strong>Tür:</strong> {genres?.join(", ") || "Bilinmiyor"}
         </p>
         <p>
           <strong>TMDb Puanı:</strong> {series.tmdb_rating || "Bilinmiyor"}
         </p>
         <p>
-          <strong>Ortalama Puan:</strong> {avgRating.toFixed(1)} / 5 (
-          {ratingCount} oy)
+          <strong>Ortalama Puan:</strong> {Number(avgRating || 0).toFixed(1)} /
+          5 ({ratingCount} oy)
         </p>
       </div>
     </div>

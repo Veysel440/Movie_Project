@@ -1,6 +1,16 @@
 import BaseTable from "../BaseTable";
+import { logClientError } from "../../services/logger";
 
 export default function SeriesRatingsCommentsTable(props) {
+  if (props.error) {
+    logClientError(
+      "SeriesRatingsCommentsTable",
+      "Dizi yorumları ve puanları tablosu hatası",
+      props.error,
+      "mid"
+    );
+  }
+
   return (
     <BaseTable
       {...props}

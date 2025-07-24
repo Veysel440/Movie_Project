@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import styles from "../../styles/moviesPage.module.css";
 import { fetchMovies } from "../../lib/api/movies";
 import useInfiniteScroll from "../../hooks/useInfiniteScroll";
+import { logError } from "../../utils/logger";
 
 const MOVIES_PER_PAGE = 25;
 
@@ -22,6 +23,7 @@ export default function MoviesPage() {
       );
     } catch (err) {
       setError(err.message);
+      logError("MoviesPage:fetchMovies", err, "high");
       return false;
     }
   }, []);
@@ -29,17 +31,21 @@ export default function MoviesPage() {
   const { observerRef, isLoading, hasMore } = useInfiniteScroll(loadMovies);
 
   const handleClick = (movie) => {
-    router.push(`/movies/${encodeURIComponent(movie.link)}`);
+    try {
+      router.push(`/movies/${encodeURIComponent(movie.link)}`);
+    } catch (err) {
+      logError("MoviesPage:handleClick", err, "mid");
+    }
   };
 
   if (error) {
+    logError("MoviesPage:render", error, "mid");
     return <div className={styles.errorMessage}>Hata: {error}</div>;
   }
 
   return (
     <div className={styles.moviesPage}>
       <h1 className={styles.moviesTitle}>🎬 Filmler</h1>
-
       <div className={styles.moviesGrid}>
         {movies.map((movie) => (
           <div
@@ -59,7 +65,6 @@ export default function MoviesPage() {
           </div>
         ))}
       </div>
-
       {isLoading && <p>Yükleniyor...</p>}
       {hasMore && (
         <div ref={observerRef} className={styles.loadingMore}>

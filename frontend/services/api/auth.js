@@ -1,47 +1,91 @@
+import { logClientError } from "../logger";
+
 // 1) LOGIN
 export async function login(email, password) {
-  const res = await fetch("http://localhost:3002/api/auth/login", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    credentials: "include",
-    body: JSON.stringify({ email, password }),
-  });
+  try {
+    const res = await fetch("http://localhost:3002/api/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      credentials: "include",
+      body: JSON.stringify({ email, password }),
+    });
 
-  const data = await res.json();
-  if (!data.success) {
-    throw new Error(data.message || "Giriş başarısız.");
+    const data = await res.json();
+    if (!data.success) {
+      logClientError(
+        "login",
+        "Kullanıcı girişi başarısız",
+        data.message,
+        "high"
+      );
+      throw new Error(data.message || "Giriş başarısız.");
+    }
+    return data.user;
+  } catch (err) {
+    logClientError("login", "Login fetch hatası", err.message, "high");
+    throw err;
   }
-  return data.user;
 }
 
-// 2) REGISTER (endpoint'in portu ayrı, kendi backend'ine göre ayarla)
+// 2) REGISTER
 export async function register(form) {
-  const res = await fetch("http://localhost:3005/api/register", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    credentials: "include",
-    body: JSON.stringify(form),
-  });
+  try {
+    const res = await fetch("http://localhost:3005/api/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      credentials: "include",
+      body: JSON.stringify(form),
+    });
 
-  const data = await res.json();
-  if (!data.success) throw new Error(data.error || "Kayıt başarısız");
-  return { email: form.email, userType: form.userType };
+    const data = await res.json();
+    if (!data.success) {
+      logClientError(
+        "register",
+        "Kullanıcı kaydı başarısız",
+        data.error,
+        "high"
+      );
+      throw new Error(data.error || "Kayıt başarısız");
+    }
+    return { email: form.email, userType: form.userType };
+  } catch (err) {
+    logClientError("register", "Register fetch hatası", err.message, "high");
+    throw err;
+  }
 }
 
-// 3) ME (Girişli kullanıcıyı döner)
+// 3) ME
 export async function me() {
-  const res = await fetch("http://localhost:3002/api/auth/me", {
-    credentials: "include",
-  });
-  if (!res.ok) throw new Error("Yetki yok");
-  const data = await res.json();
-  return data.user;
+  try {
+    const res = await fetch("http://localhost:3002/api/auth/me", {
+      credentials: "include",
+    });
+    if (!res.ok) {
+      logClientError(
+        "me",
+        "Kullanıcı yetki doğrulama başarısız",
+        "HTTP Status: " + res.status,
+        "mid"
+      );
+      throw new Error("Yetki yok");
+    }
+    const data = await res.json();
+    return data.user;
+  } catch (err) {
+    logClientError("me", "Me fetch hatası", err.message, "mid");
+    throw err;
+  }
 }
 
 // 4) LOGOUT
 export async function logout() {
-  await fetch("http://localhost:3002/api/auth/logout", {
-    credentials: "include",
-    method: "POST",
-  });
+  try {
+    await fetch("http://localhost:3002/api/auth/logout", {
+      credentials: "include",
+      method: "POST",
+    });
+  } catch (err) {
+    logClientError("logout", "Logout fetch hatası", err.message, "low");
+    // Logout silent fail
+  }
 }

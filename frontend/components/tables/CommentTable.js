@@ -1,15 +1,26 @@
 import { approveComment } from "../../services/apiOperations";
+import { logClientError } from "../../services/logger";
 
 export default function CommentTable({ data, error, setError, fetchData }) {
   const handleApprove = async (commentId) => {
     try {
       await approveComment(commentId, fetchData, setError);
     } catch (err) {
-      console.error("Onaylama hatası:", err);
+      setError("Yorum onaylama sırasında hata oluştu.");
+
+      logClientError(
+        "CommentTable",
+        "Yorum onaylama hatası",
+        err.message,
+        "high"
+      );
     }
   };
 
-  if (error) return <p className="error-message">{error}</p>;
+  if (error) {
+    logClientError("CommentTable", "Tablo yüklenemedi", error, "mid");
+    return <p className="error-message">{error}</p>;
+  }
 
   return (
     <div className="comment-table">

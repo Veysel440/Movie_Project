@@ -1,12 +1,11 @@
 import { useRouter } from "next/router";
 import { useEffect, useState, useCallback } from "react";
-
 import MovieMain from "./MovieMain";
 import MovieActors from "./MovieActors";
 import MovieComments from "./MovieComments";
-
 import { fetchMovieDetail } from "../../lib/api/movies";
 import styles from "../../styles/movieDetail.module.css";
+import { logError } from "../../utils/logger";
 
 export default function MovieDetail() {
   const router = useRouter();
@@ -32,7 +31,7 @@ export default function MovieDetail() {
       setAvgRating(data.avg_rating || 0);
       setRatingCount(data.rating_count || 0);
     } catch (err) {
-      console.error("Hata oluştu:", err.message);
+      logError("MovieDetail:fetchMovieDetail", err, "high");
       setError(err.message);
     } finally {
       setLoading(false);
@@ -48,6 +47,7 @@ export default function MovieDetail() {
   }
 
   if (error || !movie) {
+    logError("MovieDetail:render", error || "Film bulunamadı", "mid");
     return (
       <div className={styles.errorContainer}>{error || "Film bulunamadı"}</div>
     );

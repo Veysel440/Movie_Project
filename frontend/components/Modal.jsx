@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import styles from "../styles/admin.module.css";
 import { getTableColumns, validateData } from "../utils/helpers/tableHelpers";
 import { validateEmail } from "../utils/helpers/validationHelpers";
+import { logClientError } from "../services/logger"; // EKLENDİ
 
 export default function Modal({
   isOpen,
@@ -20,6 +21,9 @@ export default function Modal({
   useEffect(() => {
     setLocalItem(item || {});
     if (setParentError) setParentError(error);
+    if (error) {
+      logClientError("Modal.js", "Form hata", error, "mid");
+    }
   }, [item, error, setParentError]);
 
   if (!isOpen) return null;

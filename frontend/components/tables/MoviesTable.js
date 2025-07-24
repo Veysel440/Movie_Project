@@ -1,6 +1,16 @@
 import BaseTable from "../BaseTable";
+import { logClientError } from "../../services/logger";
 
 export default function MoviesTable(props) {
+  if (props.error) {
+    logClientError(
+      "MoviesTable",
+      "Filmler yönetimi tablosu hatası",
+      props.error,
+      "mid"
+    );
+  }
+
   return (
     <BaseTable
       {...props}

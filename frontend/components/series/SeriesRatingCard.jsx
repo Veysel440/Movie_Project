@@ -1,6 +1,12 @@
 import styles from "../../styles/ratingCard.module.css";
+import { logClientError } from "../../services/logger";
 
 export default function SeriesRatingCard({ comment }) {
+  if (!comment) {
+    logClientError("SeriesRatingCard", "comment yok", "", "low");
+    return <div>Yorum yüklenemedi.</div>;
+  }
+
   const {
     EMAIL = "Bilinmeyen Kullanıcı",
     COMMENT_TEXT = "Yorum yok",

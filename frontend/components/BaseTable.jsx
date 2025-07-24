@@ -6,6 +6,7 @@ import {
   handleDelete,
   truncateDescription,
 } from "../services/api";
+import { logClientError } from "../services/logger";
 
 export default function BaseTable({
   title,
@@ -28,6 +29,11 @@ export default function BaseTable({
   keyField = "ID",
   inputTypes = {},
 }) {
+  // Tablo hata loglama
+  if (error) {
+    logClientError(`BaseTable:${title}`, "Tablo işlemi hatası", error, "mid");
+  }
+
   const handleAddSave = async (item) => {
     await handleAdd(
       item,

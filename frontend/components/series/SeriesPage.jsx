@@ -5,6 +5,7 @@ import ErrorMessage from "../ui/ErrorMessage";
 import useInfiniteScroll from "../../hooks/useInfiniteScroll";
 import styles from "../../styles/series.module.css";
 import { fetchSeries } from "../../lib/api/series";
+import { logClientError } from "../../services/logger";
 
 const SERIES_PER_PAGE = 25;
 
@@ -24,8 +25,14 @@ export default function SeriesPage() {
         pageNum * SERIES_PER_PAGE < data.total
       );
     } catch (err) {
-      console.error("Veri çekme hatası:", err.message);
       setError(err.message);
+      // Logger (orta seviye, sayfa kırılır ama çok kritik değil)
+      logClientError(
+        "SeriesPage",
+        "Dizi listesi çekme hatası",
+        err.message,
+        "mid"
+      );
       return false;
     }
   }, []);

@@ -1,12 +1,11 @@
 import { useRouter } from "next/router";
 import { useEffect, useState, useCallback } from "react";
-
 import SeriesMain from "./SeriesMain";
 import SeriesActors from "./SeriesActors";
 import SeriesComments from "./SeriesComments";
-
 import { fetchSeriesDetail } from "../../lib/api/series";
 import styles from "../../styles/seriesDetail.module.css";
+import { logClientError } from "../../services/logger";
 
 export default function SeriesDetail() {
   const router = useRouter();
@@ -32,8 +31,14 @@ export default function SeriesDetail() {
       setAvgRating(data.avg_rating || 0);
       setRatingCount(data.rating_count || 0);
     } catch (err) {
-      console.error("Dizi yüklenirken hata:", err.message);
       setError(err.message);
+      // Logger (yüksek seviye, çünkü detay sayfası tamamen bozulduysa büyük sorun)
+      logClientError(
+        "SeriesDetail",
+        "Dizi yüklenirken hata",
+        err.message,
+        "high"
+      );
     } finally {
       setLoading(false);
     }

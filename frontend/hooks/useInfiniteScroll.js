@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { logClientError } from "../services/logger";
 
 export default function useInfiniteScroll(fetchFunction) {
   const [page, setPage] = useState(1);
@@ -8,9 +9,19 @@ export default function useInfiniteScroll(fetchFunction) {
 
   const loadMore = async () => {
     setIsLoading(true);
-    const more = await fetchFunction(page);
-    if (!more) setHasMore(false);
-    setIsLoading(false);
+    try {
+      const more = await fetchFunction(page);
+      if (!more) setHasMore(false);
+    } catch (err) {
+      logClientError(
+        "useInfiniteScroll",
+        "Sonsuz scroll veri çekme hatası",
+        err?.message,
+        "low"
+      );
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   useEffect(() => {

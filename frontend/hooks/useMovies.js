@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { logClientError } from "../services/logger";
 
 export default function useMovies() {
   const [movies, setMovies] = useState([]);
@@ -18,11 +19,22 @@ export default function useMovies() {
         } else {
           setMovies([]);
           setFilteredMovies([]);
+          logClientError(
+            "useMovies",
+            "API response success değil",
+            JSON.stringify(data),
+            "mid"
+          );
         }
       } catch (error) {
         setMovies([]);
         setFilteredMovies([]);
-        console.error("Hata oluştu:", error);
+        logClientError(
+          "useMovies",
+          "Film listesi yükleme hatası",
+          error?.message,
+          "high"
+        );
       }
       setLoading(false);
     };

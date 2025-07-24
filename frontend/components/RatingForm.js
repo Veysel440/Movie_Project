@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import styles from "../styles/ratingForm.module.css";
+import { logClientError } from "../services/logger"; // EKLENDİ
 
 export default function RatingForm({
   link,
@@ -21,6 +22,7 @@ export default function RatingForm({
 
     if (rating <= 0) {
       setError("Lütfen yıldız puanı seçin.");
+      logClientError("RatingForm.js", "Yıldız puanı seçilmedi", "", "low");
       return;
     }
 
@@ -28,6 +30,7 @@ export default function RatingForm({
 
     if (!finalEmail.includes("@")) {
       setError("Geçerli bir e-posta adresi girin.");
+      logClientError("RatingForm.js", "Geçersiz e-posta", finalEmail, "low");
       return;
     }
 
@@ -55,9 +58,16 @@ export default function RatingForm({
         if (onSuccess) onSuccess();
       } else {
         setError(result.message || "Kaydedilemedi");
+        logClientError(
+          "RatingForm.js",
+          "API response başarısız",
+          result.message,
+          "mid"
+        );
       }
     } catch (err) {
       setError("Bir hata oluştu, tekrar deneyin.");
+      logClientError("RatingForm.js", "API hatası", err.message, "mid");
     }
   };
 

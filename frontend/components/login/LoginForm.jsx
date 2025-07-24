@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { useAuth } from "../../context/AuthContext";
+import { logClientError } from "../../services/logger";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
@@ -21,9 +22,12 @@ export default function LoginForm() {
       } else if (user.userType === "oyuncu") {
         router.push("/protected");
       } else {
-        setError("Bilinmeyen kullanıcı tipi.");
+        const msg = "Bilinmeyen kullanıcı tipi.";
+        logClientError("LoginForm", msg, JSON.stringify(user), "mid");
+        setError(msg);
       }
     } catch (err) {
+      logClientError("LoginForm", "Giriş hatası", err.message, "high");
       setError(err.message || "Giriş başarısız");
     }
   };

@@ -1,6 +1,16 @@
 import BaseTable from "../BaseTable";
+import { logClientError } from "../../services/logger";
 
 export default function UsersTable(props) {
+  if (props.error) {
+    logClientError(
+      "UsersTable",
+      "Kullanıcılar yönetimi tablosu hatası",
+      props.error,
+      "mid"
+    );
+  }
+
   return (
     <BaseTable
       {...props}

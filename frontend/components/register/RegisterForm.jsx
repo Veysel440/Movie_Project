@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useAuth } from "../../context/AuthContext";
 import { useRouter } from "next/router";
 import { register } from "../../services/api/auth";
+import { logClientError } from "../../services/logger";
 import styles from "../../styles/auth.module.css";
 
 export default function RegisterForm() {
@@ -28,6 +29,13 @@ export default function RegisterForm() {
       router.push("/protected");
     } catch (err) {
       setError(err.message || "Kayıt başarısız");
+      // 🟠 Logger ile backend'e bildir
+      await logClientError(
+        "RegisterForm/handleSubmit",
+        err.message || "Kayıt başarısız",
+        err.stack || JSON.stringify(form),
+        "mid"
+      );
     }
   };
 
@@ -49,7 +57,6 @@ export default function RegisterForm() {
               required
             />
           </div>
-
           <div className={styles.formGroup}>
             <label className={styles.formLabel}>Ad</label>
             <input
@@ -61,7 +68,6 @@ export default function RegisterForm() {
               required
             />
           </div>
-
           <div className={styles.formGroup}>
             <label className={styles.formLabel}>Soyad</label>
             <input
@@ -73,7 +79,6 @@ export default function RegisterForm() {
               required
             />
           </div>
-
           <div className={styles.formGroup}>
             <label className={styles.formLabel}>Şifre</label>
             <input
@@ -86,7 +91,6 @@ export default function RegisterForm() {
               required
             />
           </div>
-
           <div className={styles.formGroup}>
             <label className={styles.formLabel}>Kullanıcı Türü</label>
             <select

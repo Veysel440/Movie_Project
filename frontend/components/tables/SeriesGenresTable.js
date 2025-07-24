@@ -1,6 +1,16 @@
 import BaseTable from "../BaseTable";
+import { logClientError } from "../../services/logger";
 
 export default function SeriesGenresTable(props) {
+  if (props.error) {
+    logClientError(
+      "SeriesGenresTable",
+      "Dizi türleri tablosu hatası",
+      props.error,
+      "mid"
+    );
+  }
+
   return (
     <BaseTable
       {...props}

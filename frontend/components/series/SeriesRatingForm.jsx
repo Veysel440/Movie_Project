@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useAuth } from "../../context/AuthContext";
 import styles from "../../styles/ratingForm.module.css";
+import { logClientError } from "../../services/logger";
 
 export default function SeriesRatingForm({ link, onSuccess, className }) {
   const { user } = useAuth();
@@ -52,9 +53,23 @@ export default function SeriesRatingForm({ link, onSuccess, className }) {
         if (onSuccess) onSuccess();
       } else {
         setError(result.message || "Kaydedilemedi");
+
+        logClientError(
+          "SeriesRatingForm",
+          "API'den success=false",
+          result.message,
+          "low"
+        );
       }
     } catch (err) {
       setError("Bir hata oluştu, tekrar deneyin.");
+      // Logger (orta seviye, API'ye ulaşılamıyor)
+      logClientError(
+        "SeriesRatingForm",
+        "API fetch hatası",
+        err.message,
+        "mid"
+      );
     }
   };
 

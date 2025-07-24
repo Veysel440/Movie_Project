@@ -12,6 +12,7 @@ import SeriesActorsTable from "./tables/SeriesActorsTable";
 import SeriesGenresTable from "./tables/SeriesGenresTable";
 import SeriesRatingsCommentsTable from "./tables/SeriesRatingsCommentsTable";
 import LogsTable from "./logger/LogsTable";
+import { logClientError } from "../services/logger";
 
 export default function Admin() {
   const [activeTab, setActiveTab] = useState("MOVIES");
@@ -26,6 +27,12 @@ export default function Admin() {
   useEffect(() => {
     fetchData(activeTab, setData, setError, setLoading);
   }, [activeTab]);
+
+  useEffect(() => {
+    if (error) {
+      logClientError("Admin.js", "Admin paneli hata", error, "high");
+    }
+  }, [error]);
 
   const props = {
     activeTab,

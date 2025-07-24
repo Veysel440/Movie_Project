@@ -1,5 +1,6 @@
 import { apiRequest, prepareId } from "./apiCore";
 import { getIdKey, normalizeData } from "../../utils/helpers";
+import { logClientError } from "../logger";
 
 export const fetchData = async (table, setData, setError, setLoading) => {
   try {
@@ -12,6 +13,12 @@ export const fetchData = async (table, setData, setError, setLoading) => {
     setData(raw.map((item) => normalizeData(item, table)));
     setError("");
   } catch (err) {
+    logClientError(
+      "fetchData",
+      `Veri çekme hatası (${table})`,
+      err.message,
+      "mid"
+    );
     setError(err.message || "Veri alınamadı");
   }
 };
@@ -33,6 +40,12 @@ export const handleAdd = async (
     fetchData(activeTab);
     setError("");
   } catch (err) {
+    logClientError(
+      "handleAdd",
+      `Ekleme hatası (${activeTab})`,
+      err.message,
+      "high"
+    );
     setError(`Ekleme başarısız. Detay: ${err.message}`);
   }
 };
@@ -61,6 +74,12 @@ export const handleUpdate = async (
     fetchData(activeTab);
     setError("");
   } catch (err) {
+    logClientError(
+      "handleUpdate",
+      `Güncelleme hatası (${activeTab})`,
+      err.message,
+      "high"
+    );
     setError(`Güncelleme başarısız. Detay: ${err.message}`);
   }
 };
@@ -74,6 +93,12 @@ export const handleDelete = async (item, activeTab, fetchData, setError) => {
     fetchData(activeTab);
     setError("");
   } catch (err) {
+    logClientError(
+      "handleDelete",
+      `Silme hatası (${activeTab})`,
+      err.message,
+      "high"
+    );
     setError(`Silme başarısız. Detay: ${err.message}`);
   }
 };
@@ -85,6 +110,12 @@ export const approveComment = async (commentId, fetchData, setError) => {
     fetchData("MOVIE_RATINGS_COMMENTS");
     setError("");
   } catch (err) {
+    logClientError(
+      "approveComment",
+      "Yorum onaylama hatası",
+      err.message,
+      "mid"
+    );
     setError(`Onaylama başarısız. Detay: ${err.message}`);
   }
 };

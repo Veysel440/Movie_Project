@@ -1,12 +1,23 @@
 import Link from "next/link";
 import styles from "../../styles/series.module.css";
+import { logClientError } from "../../services/logger";
 
 export default function SeriesCard({ item }) {
-  if (!item) return <div className={styles.card}>Yükleniyor...</div>;
+  if (!item) {
+    logClientError("SeriesCard", "item prop yok veya undefined", "", "mid");
+    return <div className={styles.card}>Yükleniyor...</div>;
+  }
 
   let slug = item.link;
-  if (item.link.startsWith("http")) {
-    slug = item.link.replace("https://dizimag.eu/dizi/", "").replace(/\/$/, "");
+  try {
+    if (item.link.startsWith("http")) {
+      slug = item.link
+        .replace("https://dizimag.eu/dizi/", "")
+        .replace(/\/$/, "");
+    }
+  } catch (err) {
+    logClientError("SeriesCard", "Slug işlemede hata", err.message, "low");
+    slug = "";
   }
 
   return (

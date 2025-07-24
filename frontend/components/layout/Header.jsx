@@ -1,9 +1,21 @@
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import { useAuth } from "../../context/AuthContext";
+import { logClientError } from "../../services/logger";
 
 export default function Header({ darkTheme, toggleTheme }) {
   const { user, logout } = useAuth();
+
+  const handleLogout = () => {
+    try {
+      if (typeof logout !== "function") {
+        throw new Error("logout fonksiyonu tanımsız");
+      }
+      logout();
+    } catch (err) {
+      logClientError("Header", "Çıkış işlemi hatası", err.message, "mid");
+    }
+  };
 
   return (
     <header>
@@ -17,7 +29,7 @@ export default function Header({ darkTheme, toggleTheme }) {
         {user ? (
           <>
             <span style={{ marginLeft: "10px" }}>Merhaba, {user.email}</span>
-            <button onClick={logout} style={{ marginLeft: "10px" }}>
+            <button onClick={handleLogout} style={{ marginLeft: "10px" }}>
               Çıkış Yap
             </button>
           </>

@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { useRouter } from "next/router";
 import { useAuth } from "../context/AuthContext";
+import { useRouter } from "next/router";
+import { logClientError } from "../services/logger";
 
 export default function useLoginForm() {
   const [email, setEmail] = useState("");
@@ -25,6 +26,12 @@ export default function useLoginForm() {
 
       if (!response.ok) {
         setErrorMessage(data.message || "Giriş başarısız");
+        logClientError(
+          "useLoginForm",
+          "Giriş API hatası",
+          data.message || "Giriş başarısız",
+          "high"
+        );
         return;
       }
 
@@ -36,10 +43,21 @@ export default function useLoginForm() {
         router.push("/protected");
       } else {
         setErrorMessage("Bilinmeyen kullanıcı tipi");
+        logClientError(
+          "useLoginForm",
+          "Bilinmeyen kullanıcı tipi",
+          JSON.stringify(data.user),
+          "mid"
+        );
       }
     } catch (err) {
-      console.error(err);
       setErrorMessage("Sunucuya bağlanılamadı.");
+      logClientError(
+        "useLoginForm",
+        "Login submit exception",
+        err?.message,
+        "high"
+      );
     }
   };
 

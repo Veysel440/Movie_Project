@@ -446,3 +446,4 @@
 {"level":"info","message":"POST /api/auth/login","timestamp":"2025-07-21T15:16:33.336Z"}
 {"level":"info","message":"GET /api/auth/me","timestamp":"2025-07-21T16:19:51.063Z"}
 {"level":"info","message":"POST /api/auth/login","timestamp":"2025-07-21T16:20:06.990Z"}
+{"level":"info","message":"Server listening on port 3002","timestamp":"2025-07-22T15:51:40.599Z"}

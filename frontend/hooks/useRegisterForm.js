@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { logClientError } from "../services/logger";
 
 export default function useRegisterForm() {
   const [name, setName] = useState("");
@@ -24,6 +25,12 @@ export default function useRegisterForm() {
 
     if (password !== confirm) {
       setErrorMessage("Parolalar eşleşmiyor!");
+      logClientError(
+        "useRegisterForm",
+        "Parola eşleşmiyor",
+        `${email} - ${name} - ${surname}`,
+        "low"
+      );
       return;
     }
 
@@ -40,6 +47,12 @@ export default function useRegisterForm() {
 
       if (!response.ok) {
         const errorData = JSON.parse(text);
+        logClientError(
+          "useRegisterForm",
+          "Kayıt API hatası",
+          errorData.error || "Sunucu hatası",
+          "high"
+        );
         throw new Error(errorData.error || "Sunucu hatası");
       }
 
@@ -51,6 +64,12 @@ export default function useRegisterForm() {
         error.message === "Failed to fetch"
           ? "Sunucuya bağlanılamadı. Backend portu (3003) açık mı?"
           : error.message
+      );
+      logClientError(
+        "useRegisterForm",
+        "Kayıt submit hatası",
+        error?.message,
+        "high"
       );
     }
   };
