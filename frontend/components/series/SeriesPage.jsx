@@ -26,7 +26,7 @@ export default function SeriesPage() {
       );
     } catch (err) {
       setError(err.message);
-      // Logger (orta seviye, sayfa kırılır ama çok kritik değil)
+
       logClientError(
         "SeriesPage",
         "Dizi listesi çekme hatası",

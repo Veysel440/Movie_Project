@@ -1,7 +1,7 @@
 import RatingForm from "../RatingForm";
 import RatingCard from "../RatingCard";
 import styles from "../../styles/movieDetail.module.css";
-import { logError } from "../../utils/logger";
+import { logClientError } from "../../services/logger";
 
 export default function MovieComments({ link, comments, reload }) {
   try {

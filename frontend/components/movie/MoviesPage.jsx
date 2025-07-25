@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import styles from "../../styles/moviesPage.module.css";
 import { fetchMovies } from "../../lib/api/movies";
 import useInfiniteScroll from "../../hooks/useInfiniteScroll";
-import { logError } from "../../utils/logger";
+import { logClientError } from "../../services/logger";
 
 const MOVIES_PER_PAGE = 25;
 

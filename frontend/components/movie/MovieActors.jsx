@@ -1,6 +1,6 @@
 import ActorCard from "../actor/ActorCard";
 import styles from "../../styles/movieActors.module.css";
-import { logError } from "../../utils/logger";
+import { logClientError } from "../../services/logger";
 
 export default function MovieActors({ actors }) {
   try {

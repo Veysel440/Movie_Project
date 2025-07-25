@@ -5,7 +5,7 @@ import MovieActors from "./MovieActors";
 import MovieComments from "./MovieComments";
 import { fetchMovieDetail } from "../../lib/api/movies";
 import styles from "../../styles/movieDetail.module.css";
-import { logError } from "../../utils/logger";
+import { logClientError } from "../../services/logger";
 
 export default function MovieDetail() {
   const router = useRouter();

@@ -4,6 +4,7 @@ const { getConnection } = require("./db");
 const { handlePendingRatings } = require("./controllers/ratingController");
 const { handleMovieDetail } = require("./controllers/moviesController");
 const { handleSeriesDetail } = require("./controllers/seriesController");
+const oracledb = require("oracledb");
 const {
   handlePost,
   handleGet,
@@ -13,7 +14,6 @@ const {
 
 const { logErrorToDB } = require("./services/loggerService");
 
-// ✅ Merkezi hata yakalama fonksiyonu:
 async function safeHandler(handlerFn, req, res, methodName) {
   try {
     await handlerFn(req, res);
@@ -28,8 +28,6 @@ async function safeHandler(handlerFn, req, res, methodName) {
     });
   }
 }
-
-// ✅ CRUD + Özel işlemleri buraya yazıyoruz:
 
 router.post("/pending-ratings", (req, res) =>
   safeHandler(

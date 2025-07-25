@@ -32,7 +32,7 @@ export default function SeriesDetail() {
       setRatingCount(data.rating_count || 0);
     } catch (err) {
       setError(err.message);
-      // Logger (yüksek seviye, çünkü detay sayfası tamamen bozulduysa büyük sorun)
+
       logClientError(
         "SeriesDetail",
         "Dizi yüklenirken hata",

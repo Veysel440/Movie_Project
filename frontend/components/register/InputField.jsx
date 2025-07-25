@@ -1,4 +1,4 @@
-import { logError } from "../../utils/logger"; // yolu kendi yapına göre ayarla
+import { logClientError } from "../../services/logger";
 
 export default function InputField({
   label,

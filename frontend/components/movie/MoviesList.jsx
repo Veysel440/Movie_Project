@@ -1,6 +1,6 @@
 import MovieCard from "./MovieCard";
 import styles from "../../styles/movies.module.css";
-import { logError } from "../../utils/logger";
+import { logClientError } from "../../services/logger";
 
 export default function MoviesList({ movies }) {
   try {

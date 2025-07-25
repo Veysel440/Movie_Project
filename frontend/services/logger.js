@@ -14,25 +14,3 @@ export async function logClientError(
     console.error("Logger API çağrısı başarısız:", err);
   }
 }
-
-export async function logClientError(
-  location,
-  message,
-  detail = "",
-  severity = "low"
-) {
-  try {
-    await fetch("http://localhost:3001/api/ERROR_LOGS", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        location,
-        message,
-        detail,
-        severity,
-      }),
-    });
-  } catch (err) {
-    console.error("Log gönderilemedi:", err);
-  }
-}

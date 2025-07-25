@@ -1,6 +1,5 @@
 import { logClientError } from "../logger";
 
-// 1) LOGIN
 export async function login(email, password) {
   try {
     const res = await fetch("http://localhost:3002/api/auth/login", {
@@ -27,7 +26,6 @@ export async function login(email, password) {
   }
 }
 
-// 2) REGISTER
 export async function register(form) {
   try {
     const res = await fetch("http://localhost:3005/api/register", {
@@ -54,7 +52,6 @@ export async function register(form) {
   }
 }
 
-// 3) ME
 export async function me() {
   try {
     const res = await fetch("http://localhost:3002/api/auth/me", {
@@ -77,7 +74,6 @@ export async function me() {
   }
 }
 
-// 4) LOGOUT
 export async function logout() {
   try {
     await fetch("http://localhost:3002/api/auth/logout", {
@@ -86,6 +82,5 @@ export async function logout() {
     });
   } catch (err) {
     logClientError("logout", "Logout fetch hatası", err.message, "low");
-    // Logout silent fail
   }
 }

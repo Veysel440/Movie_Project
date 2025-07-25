@@ -1,6 +1,5 @@
 import styles from "../../styles/movieDetail.module.css";
-import { logError } from "../../utils/logger";
-
+import { logClientError } from "../../services/logger";
 export default function MovieMain({ movie, genres, avgRating, ratingCount }) {
   try {
     return (

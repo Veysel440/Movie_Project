@@ -1,5 +1,5 @@
 import styles from "../../styles/movies.module.css";
-import { logError } from "../../utils/logger";
+import { logClientError } from "../../services/logger";
 
 export default function MovieCard({ movie }) {
   try {

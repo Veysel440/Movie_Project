@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import LogDetailModal from "./LogDetailModal";
+import styles from "../../styles/adminLogs.module.css";
 
 export default function LogsTable() {
   const [logs, setLogs] = useState([]);
@@ -19,23 +20,15 @@ export default function LogsTable() {
         setLogs(json.data || []);
         setLoading(false);
       })
-      .catch((err) => {
-        console.error("Loglar alınamadı:", err);
-        setLoading(false);
-      });
+      .catch(() => setLoading(false));
   };
 
   const handleDelete = async (id) => {
     if (!window.confirm(`Log ID ${id} silinsin mi?`)) return;
-
-    try {
-      await fetch(`http://localhost:3001/api/ERROR_LOGS/${id}`, {
-        method: "DELETE",
-      });
-      fetchLogs();
-    } catch (err) {
-      console.error("Silme hatası:", err);
-    }
+    await fetch(`http://localhost:3001/api/ERROR_LOGS/${id}`, {
+      method: "DELETE",
+    });
+    fetchLogs();
   };
 
   const filteredLogs =
@@ -46,16 +39,8 @@ export default function LogsTable() {
   if (loading) return <p>Yükleniyor...</p>;
 
   return (
-    <div>
-      <h2>🛑 Hata Logları</h2>
-
-      {selectedLogId && (
-        <LogDetailModal
-          logId={selectedLogId}
-          onClose={() => setSelectedLogId(null)}
-        />
-      )}
-
+    <div className={styles.logTableContainer}>
+      <h2 className={styles.logTableTitle}>🛑 Hata Logları</h2>
       <div style={{ marginBottom: "10px" }}>
         <label>
           Filtre:
@@ -71,45 +56,76 @@ export default function LogsTable() {
           </select>
         </label>
       </div>
-
-      <table style={{ width: "100%", fontSize: "12px" }}>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Konum</th>
-            <th>Mesaj</th>
-            <th>Seviye</th>
-            <th>Tarih</th>
-            <th>Detay</th>
-            <th>Sil</th>
-          </tr>
-        </thead>
-        <tbody>
-          {filteredLogs.length === 0 ? (
+      <div className={styles.logTableWrapper}>
+        <table className={styles.logTable}>
+          <thead>
             <tr>
-              <td colSpan="7">Seçilen seviyede log bulunamadı.</td>
+              <th>ID</th>
+              <th>Konum</th>
+              <th>Mesaj</th>
+              <th>Seviye</th>
+              <th>Tarih</th>
+              <th>Detay</th>
+              <th>Sil</th>
             </tr>
-          ) : (
-            filteredLogs.map((log) => (
-              <tr key={log.ID}>
-                <td>{log.ID}</td>
-                <td>{log.LOCATION}</td>
-                <td>{log.MESSAGE}</td>
-                <td>{log.SEVERITY}</td>
-                <td>{log.CREATED_AT}</td>
-                <td>
-                  <button onClick={() => setSelectedLogId(log.ID)}>
-                    Detay
-                  </button>
-                </td>
-                <td>
-                  <button onClick={() => handleDelete(log.ID)}>Sil</button>
+          </thead>
+          <tbody>
+            {filteredLogs.length === 0 ? (
+              <tr>
+                <td colSpan="7" style={{ textAlign: "center" }}>
+                  Seçilen seviyede log bulunamadı.
                 </td>
               </tr>
-            ))
-          )}
-        </tbody>
-      </table>
+            ) : (
+              filteredLogs.map((log) => (
+                <tr key={log.ID}>
+                  <td>{log.ID}</td>
+                  <td style={{ maxWidth: 140, wordBreak: "break-word" }}>
+                    {log.LOCATION}
+                  </td>
+                  <td style={{ maxWidth: 240, wordBreak: "break-word" }}>
+                    {log.MESSAGE}
+                  </td>
+                  <td
+                    className={
+                      log.SEVERITY === "high"
+                        ? styles.severityHigh
+                        : log.SEVERITY === "mid"
+                        ? styles.severityMid
+                        : styles.severityLow
+                    }
+                  >
+                    {log.SEVERITY}
+                  </td>
+                  <td>{log.CREATED_AT}</td>
+                  <td>
+                    <button
+                      className={`${styles.logActionBtn} ${styles.detail}`}
+                      onClick={() => setSelectedLogId(log.ID)}
+                    >
+                      Detay
+                    </button>
+                  </td>
+                  <td>
+                    <button
+                      className={`${styles.logActionBtn} ${styles.delete}`}
+                      onClick={() => handleDelete(log.ID)}
+                    >
+                      Sil
+                    </button>
+                  </td>
+                </tr>
+              ))
+            )}
+          </tbody>
+        </table>
+      </div>
+      {selectedLogId && (
+        <LogDetailModal
+          logId={selectedLogId}
+          onClose={() => setSelectedLogId(null)}
+        />
+      )}
     </div>
   );
 }

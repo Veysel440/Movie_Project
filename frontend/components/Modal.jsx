@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import styles from "../styles/admin.module.css";
 import { getTableColumns, validateData } from "../utils/helpers/tableHelpers";
 import { validateEmail } from "../utils/helpers/validationHelpers";
-import { logClientError } from "../services/logger"; // EKLENDİ
+import { logClientError } from "../services/logger";
 
 export default function Modal({
   isOpen,

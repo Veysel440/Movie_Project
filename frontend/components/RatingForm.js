@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import styles from "../styles/ratingForm.module.css";
-import { logClientError } from "../services/logger"; // EKLENDİ
+import { logClientError } from "../services/logger";
 
 export default function RatingForm({
   link,
